@@ -373,7 +373,7 @@
                             <div class="base-icons">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
                             </div>
-                            <span>Etats et Statistiques</span>
+                            <span>gestion des Etats</span>
                         </div>
                     </a>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
@@ -970,25 +970,32 @@
                             <a href="https://designreset.com/cork/ltr/documentation/index.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Documentation </a>
                         </li> -->
                     </ul>
-                </div>
+                </div> 
 
-            </div>
-
-        </div>
+<!-- MENU GESTION DES ETATS -->
 
         <div class="submenu" id="stat">
                     <ul class="submenu-list" data-parent-element="#stat">
                       <li class="sub-submenu">
-                            <a role="menu" class="collapsed" data-toggle="collapse" data-target="#auth" aria-expanded="false"><div> <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Authentication</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+                            <a role="menu" class="collapsed" data-toggle="collapse" data-target="#auth" aria-expanded="false"><div> <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Palmares des ventes</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
                             <ul id="auth" class="collapse" data-parent="#compact_submenuSidebar">
                                 <li>
-                                    <a href="starter_kit_blank_page.html"> Clients </a>
+                                    <a href="starter_kit_blank_page.html"> Ventes/Clients </a>
                                 </li>
                                 <li>
-                                    <a href="starter_kit_breadcrumb.html"> Produits </a>
+                                    <a href="starter_kit_breadcrumb.html"> Ventes/Produits </a>
                                 </li>
                                 <li>
-                                    <a href="starter_kit_breadcrumb.html"> Clients/Produits </a>
+                                    <a href="starter_kit_breadcrumb.html"> Ventes/Clients/Produits </a>
+                                </li>
+                                <li>
+                                    <a href="starter_kit_blank_page.html"> cumul de Ventes/Clients </a>
+                                </li>
+                                <li>
+                                    <a href="starter_kit_breadcrumb.html"> cumul de Ventes/Produits </a>
+                                </li>
+                                <li>
+                                    <a href="starter_kit_breadcrumb.html"> Statistiques clients </a>
                                 </li>
                             </ul>
                       </li>
@@ -998,13 +1005,13 @@
                             <a role="menu" class="collapsed" data-toggle="collapse" data-target="#starter-kit" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span>Palmares des Achats </div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
                             <ul id="starter-kit" class="collapse" data-parent="#compact_submenuSidebar">
                                 <li>
-                                    <a href="starter_kit_blank_page.html">Fournisseurs </a>
+                                    <a href="starter_kit_blank_page.html">Achats/Fournisseurs </a>
                                 </li>
                                 <li>
-                                    <a href="starter_kit_breadcrumb.html"> Matieres premières </a>
+                                    <a href="starter_kit_breadcrumb.html"> Achats/MP</a>
                                 </li>
                                 <li>
-                                    <a href="starter_kit_breadcrumb.html"> Fournisseurs/Matieres premières </a>
+                                    <a href="starter_kit_breadcrumb.html">Achats/Fournisseurs/MP </a>
                                 </li>
                         </ul>
                         </li>
@@ -1012,13 +1019,13 @@
                             <a role="menu" class="collapsed" data-toggle="collapse" data-target="#starter-kit" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span>Palmares des comsommations </div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
                             <ul id="starter-kit" class="collapse" data-parent="#compact_submenuSidebar">
                                 <li>
-                                    <a href="starter_kit_blank_page.html">Equipes </a>
+                                    <a href="starter_kit_blank_page.html">Consommation/Equipes </a>
                                 </li>
                                 <li>
-                                    <a href="starter_kit_breadcrumb.html"> Matieres premières </a>
+                                    <a href="starter_kit_breadcrumb.html"> Consommation/MP </a>
                                 </li>
                                 <li>
-                                    <a href="starter_kit_breadcrumb.html"> Equipes/Matieres premières </a>
+                                    <a href="starter_kit_breadcrumb.html"> Consommation/Equipes/MP </a>
                                 </li>
                         </ul>
                         </li> 
@@ -1067,7 +1074,9 @@
                         </ul>
                 </div>  -->
 
+                </div>
 
+        </div>
 
 
 
