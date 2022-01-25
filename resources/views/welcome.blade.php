@@ -345,7 +345,7 @@
                                 <div class="base-icons">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
                                 </div>
-                                <span>Caisse</span>
+                                <span>Gestion de la Caisse</span>
                             </div>
                         </a>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
@@ -776,7 +776,7 @@
 
               
               
-              <!-- MENU Gestion DES VENTES -->
+ <!-- MENU Gestion DES VENTES -->
               
                 <div class="submenu" id="users">
                     <ul class="submenu-list" data-parent-element="#users">
@@ -824,10 +824,34 @@
                     </ul>
                 </div>
 
+  <!-- MENU GESTION DE LA CAISSE -->
+
                 <div class="submenu" id="pages">
                     <ul class="submenu-list" data-parent-element="#pages">
+                    <li class="sub-submenu">
+                    <a role="menu" class="collapsed" data-toggle="collapse" data-target="#datatables" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span>Saisir les opérations de caisse</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg> </a>
+                    <ul id="datatables" class="collapse" data-parent="#compact_submenuSidebar">
                         <li>
-                            <a href="pages_helpdesk.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Saisir les opérations de caisse </a>
+                            <a href="table_dt_basic.html">Nouvelle saisie</a>
+                        </li>
+                        <li>
+                            <a href="table_dt_basic-dark.html">Saisie en cours</a>
+                        </li>
+                        </ul>
+                        </li>
+                        <li class="sub-submenu">
+                    <a role="menu" class="collapsed" data-toggle="collapse" data-target="#datatables" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span>Contôle de caisse</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg> </a>
+                    <ul id="datatables" class="collapse" data-parent="#compact_submenuSidebar">
+                        <li>
+                            <a href="table_dt_basic.html">Brouillard en cours</a>
+                        </li>
+                        <li>
+                            <a href="table_dt_basic-dark.html">Valider un brouillard</a>
+                        </li>
+                        <li>
+                            <a href="table_dt_basic-dark.html">Saisie directe</a>
+                        </li>
+                        </ul>
                         </li>
                         <li>
                             <a href="pages_contact_us.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> saisir les reglements </a>
