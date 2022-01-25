@@ -359,7 +359,7 @@
                                 <div class="base-icons">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                                 </div>
-                                <span class="">Comptabilité</span>
+                                <span class="">Gestion Comptable</span>
                             </div>
                         </a>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
@@ -887,7 +887,9 @@
                         </li> -->
                     </ul>
                 </div>
-                
+
+<!-- MENU GESTION COMPTABLES            -->
+
                 <div class="submenu" id="more">
                     <ul class="submenu-list" data-parent-element="#more">
 
@@ -920,18 +922,36 @@
                                 </li>
                             </ul>
                         </li>  -->
-                        <li>
-                            <a href="dragndrop_dragula.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Paramètres comptable </a>
-                        </li>
-                        <li>
-                            <a href="charts_apex.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Saisir les opérations comptables </a>
-                        </li>
+                        <li class="sub-submenu">
+                        <a role="menu" class="collapsed" data-toggle="collapse" data-target="#starter-kit" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Saisir les opérations comptables</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+                        <ul id="starter-kit" class="collapse" data-parent="#compact_submenuSidebar">
+                            <li>
+                                <a href="starter_kit_blank_page.html">Créér un lot de saisie </a>
+                            </li>
+                            <li>
+                                <a href="starter_kit_breadcrumb.html">Valider un lot en cours </a>
+                            </li>
+                            <li>
+                                <a href="starter_kit_boxed.html">Journal de saisie </a>
+                            </li>
+                        </ul>
+                    </li>
                         <li>
                             <a href="map_jvector.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Interroger un compte </a>
                         </li>
-                        <li>
-                            <a href="map_jvector.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Etats comptables </a>
-                        </li>
+                        <li class="sub-submenu">
+                        <a role="menu" class="collapsed" data-toggle="collapse" data-target="#starter-kit" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Etats comptables</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+                        <ul id="starter-kit" class="collapse" data-parent="#compact_submenuSidebar">
+                            <li>
+                                <a href="starter_kit_blank_page.html">Balance </a>
+                            </li>
+                            <li>
+                                <a href="starter_kit_breadcrumb.html">Lot de saisie </a>
+                            </li>
+                            <li>
+                                <a href="starter_kit_boxed.html">Grand livre des comptes</a>
+                            </li>
+                        </ul>
                         <!-- <li class="sub-submenu">
                             <a role="menu" class="collapsed" data-toggle="collapse" data-target="#starter-kit" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Starter Kit</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
                             <ul id="starter-kit" class="collapse" data-parent="#compact_submenuSidebar">
