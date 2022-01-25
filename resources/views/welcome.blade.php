@@ -668,6 +668,7 @@
                             <a href="table_dt_basic-dark.html">En cours</a>
                         </li>
                     </ul>
+                    </li>
                     <li class="sub-submenu">
                     <a role="menu" class="collapsed" data-toggle="collapse" data-target="#datatables" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span>Contrôle de production</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg> </a>
                     <ul id="datatables" class="collapse" data-parent="#compact_submenuSidebar">
@@ -773,20 +774,53 @@
                     </ul>
                 </div>
 
+              
+              
+              <!-- MENU Gestion DES VENTES -->
+              
                 <div class="submenu" id="users">
                     <ul class="submenu-list" data-parent-element="#users">
+                    <li class="sub-submenu">
+                    <a role="menu" class="collapsed" data-toggle="collapse" data-target="#datatables" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span>Saisir une facture client</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg> </a>
+                    <ul id="datatables" class="collapse" data-parent="#compact_submenuSidebar">
                         <li>
-                            <a href="user_profile.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Saisir une facture client </a>
+                            <a href="table_dt_basic.html">Nouvelle facture </a>
                         </li>
+                        <li>
+                            <a href="table_dt_basic-dark.html"> Facture en cours</a>
+                        </li>
+                    </ul>
+                    </li>
                         <li>
                             <a href="user_account_setting.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Interroger un compte client </a>
                         </li>
                         <li>
                             <a href="fonticons.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Liste des factures clients </a>
                         </li>
-                        <li>
-                            <a href="widgets.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Ventes au comptoir </a>
-                        </li>
+
+                        <li class="sub-submenu">
+                        <a role="menu" class="collapsed" data-toggle="collapse" data-target="#datatables" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span>Vente au comptoir</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg> </a>
+                        <ul id="datatables" class="collapse" data-parent="#compact_submenuSidebar">
+                            <li>
+                                <a href="table_dt_basic.html">Parametrage</a>
+                            </li>
+                            <li>
+                                <a href="table_dt_basic-dark.html">Changer le mot de passe</a>
+                            </li>
+                            <li>
+                                <a href="table_dt_ordering_sorting.html">Vente</a>
+                            </li>
+                            <li>
+                                <a href="table_dt_multi-column_ordering.html">Cloture</a>
+                            </li>
+                            <li>
+                                <a href="table_dt_ordering_sorting.html">Interrogation caisse</a>
+                            </li>
+                            <li>
+                                <a href="table_dt_multi-column_ordering.html">Situation</a>
+                            </li>
+                     </ul>
+                     </li>
                     </ul>
                 </div>
 
