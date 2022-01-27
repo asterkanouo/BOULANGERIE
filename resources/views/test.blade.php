@@ -1,5 +1,5 @@
 
-@extends('template')
+@extends('welcome')
 @section('content')
 @section('titre', env('APP_NAME'))
 <img src="{{ asset('images/images.png')}}" alt="IMAGE BOULANGERIE">
