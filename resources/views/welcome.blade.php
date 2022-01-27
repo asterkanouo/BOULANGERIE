@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>Boulangerie| Dashboard</title>
+    <title>Boulangerie Sigma</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
     <link href="assets/css/loader.css" rel="stylesheet" type="text/css" />
     <script src="assets/js/loader.js"></script>
@@ -38,7 +38,7 @@
             <ul class="navbar-item flex-row">
                 <li class="nav-item theme-logo">
                     <a href="index.html">
-                        <img src="assets/img/logo.svg" class="navbar-logo" alt="logo">
+                        <img src="assets/img/logo.SVG" class="navbar-logo" alt="logo">
                     </a>
                 </li>
             </ul>
@@ -205,6 +205,8 @@
                                     <p>Project Leader</p>
                                 </div>
                             </div>
+
+                            
                         </div>
                         <div class="dropdown-item">
                             <a href="user_profile.html">
@@ -234,16 +236,16 @@
     <!--  END NAVBAR  -->
 
     <!--  BEGIN MAIN CONTAINER  -->
-    <div class="main-container" id="container">
+    <div class="main-container " id="container" >
 
-        <div class="overlay"></div>
-        <div class="search-overlay"></div>
+        <div class="overlay bg-success"></div>
+        <div class="search-overlay "></div>
 
         <!--  BEGIN SIDEBAR  -->
-        <div class="sidebar-wrapper sidebar-theme">
-            
+        <div class="sidebar-wrapper sidebar-theme ">
+       
             <nav id="compactSidebar">
-                <ul class="menu-categories">
+                <ul class="menu-categories bg-danger">
                     <!-- <li class="menu active">
                         <a href="#dashboard" data-active="true" class="menu-toggle">
                             <div class="base-menu">
@@ -420,7 +422,7 @@
 
                 </ul>
             </nav>
-
+    
 
 <!-- creation des sous-menus -->
 
