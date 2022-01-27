@@ -238,14 +238,14 @@
     <!--  BEGIN MAIN CONTAINER  -->
     <div class="main-container " id="container" >
 
-        <div class="overlay bg-success"></div>
+        <div class="overlay"></div>
         <div class="search-overlay "></div>
 
         <!--  BEGIN SIDEBAR  -->
         <div class="sidebar-wrapper sidebar-theme ">
        
             <nav id="compactSidebar">
-                <ul class="menu-categories bg-danger">
+                <ul class="menu-categories">
                     <!-- <li class="menu active">
                         <a href="#dashboard" data-active="true" class="menu-toggle">
                             <div class="base-menu">
