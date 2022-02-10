@@ -33,8 +33,9 @@
     <!--  END LOADER -->
 
     <!--  BEGIN NAVBAR  -->
+   
     <div class="header-container fixed-top">
-        <header class="header navbar navbar-expand-sm">
+        <header class="header navbar navbar-expand-sm  bg-success">
             <ul class="navbar-item flex-row">
                 <li class="nav-item theme-logo">
                     <a href="index.html">
@@ -442,7 +443,7 @@
                 <div class="submenu" id="app">
                     <ul class="submenu-list" data-parent-element="#app"> 
                         <li>
-                            <a href="apps_chat.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg> test </a>
+                            <a href="apps_chat.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg> Utilisateurs </a>
                         </li>
                         <li>
                             <a href="apps_mailbox.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Groupes </a>
@@ -1096,7 +1097,7 @@
 
 
 
-@yield ('content')
+
         <!--  END SIDEBAR  -->
         
         <!--  BEGIN CONTENT AREA  -->
@@ -1531,12 +1532,12 @@
                 </div>
             </div>
 
-            <div class="footer-wrapper">
+            <div class="footer-wrapper justify-content-center">
                 <div class="footer-section f-section-1">
                     <p class="">Copyright © 2021 <a target="_blank" href="https://designreset.com/">DesignReset</a>, All rights reserved.</p>
                 </div>
                 <div class="footer-section f-section-2">
-                    <p class="">Coded with <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></p>
+                    <p class="">Coded with &hearts; </p>
                 </div>
             </div>
         </div>
