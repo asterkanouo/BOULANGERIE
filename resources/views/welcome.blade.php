@@ -3,6 +3,7 @@
 
 <!-- Mirrored from designreset.com/cork/ltr/demo15/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Dec 2021 10:50:16 GMT -->
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
@@ -24,8 +25,8 @@
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
 </head>
-<body class="dashboard-analytics">
 
+<body >
     <!-- BEGIN LOADER -->
     <div id="load_screen"> <div class="loader"> <div class="loader-content">
         <div class="spinner-grow align-self-center"></div>
@@ -443,7 +444,7 @@
                 <div class="submenu" id="app">
                     <ul class="submenu-list" data-parent-element="#app"> 
                         <li>
-                            <a href="apps_chat.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg> Utilisateurs </a>
+                            <a href="utilisateurs"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg> Utilisateurs </a>
                         </li>
                         <li>
                             <a href="apps_mailbox.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Groupes </a>
@@ -1094,14 +1095,7 @@
                  </div>  
               </div>
         </div>
-
-
-
-
-        <!--  END SIDEBAR  -->
-        
-        <!--  BEGIN CONTENT AREA  -->
-        <div id="content" class="main-content">
+    <div id="content" class="main-content">
             <div class="layout-px-spacing">
 
                 <div class="page-header">
@@ -1182,7 +1176,7 @@
                         </div>
                     </div> -->
 
-                    <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+                    <!-- <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
                         <div class="widget widget-chart-three">
                             <div class="widget-heading">
                                 <div class="">
@@ -1206,7 +1200,7 @@
                                 <div id="uniqueVisits"></div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
                         <div class="widget widget-activity-three">
@@ -1545,10 +1539,8 @@
 
 
     </div>
-    <!-- END MAIN CONTAINER -->
-
-    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-    <script src="assets/js/libs/jquery-3.1.1.min.js"></script>
+   <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+   <script src="assets/js/libs/jquery-3.1.1.min.js"></script>
     <script src="bootstrap/js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
@@ -1564,9 +1556,8 @@
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <script src="plugins/apex/apexcharts.min.js"></script>
     <script src="assets/js/dashboard/dash_1.js"></script>
-    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
-</body>
+    </body>
 
 <!-- Mirrored from designreset.com/cork/ltr/demo15/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Dec 2021 10:50:19 GMT -->
 </html>

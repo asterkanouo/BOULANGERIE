@@ -1,13 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UtilisateursController;
 
 
 
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
+
+
 
 
 Route::get('/testtere', function () {
@@ -18,7 +20,7 @@ route::get('/a_proposs', function(){
     return view('about');
 })->name('about');
 
-//Route::get('etudiant',[EtudiantController::class,"index"])->name("etudiant");
+Route::get('/utilisateurs',[UtilisateursController::class,"index"])->name("utilisateurs");
 
 
 
