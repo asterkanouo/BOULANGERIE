@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UtilisateursController;
+use App\Http\Controllers\UtilisateurController;
 
 
 
@@ -20,7 +20,9 @@ route::get('/a_proposs', function(){
     return view('about');
 })->name('about');
 
-Route::get('/utilisateurs',[UtilisateursController::class,"index"])->name("utilisateurs");
+Route::get('/utilisateur',[UtilisateurController::class,"index"])->name("utilisateur");
+Route::get('/utilisateur.create',[UtilisateurController::class,"create"])->name("utilisateur.create");
+Route::post('/utilisateur.create',[UtilisateurController::class,"store"])->name("utilisateur.ajouter");
 
 
 

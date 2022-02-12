@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Utilisateurs extends Model
+class Groupe extends Model
 {
     use HasFactory;
-   
+    protected $table = 'groupe';
 }
