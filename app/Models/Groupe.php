@@ -9,4 +9,6 @@ class Groupe extends Model
 {
     use HasFactory;
     protected $table = 'groupe';
+    protected $fillable = ["libelle"];
+    public $timestamps = false;
 }
