@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 use App\Models\Groupe;
 use Illuminate\Http\Request;
 use App\Models\Utilisateur;
+use Illuminate\Support\Facades\DB;
 
 class UtilisateurController extends Controller
 {
     public function index (){
-        $utilisateur = Utilisateur::orderBy("nom","asc")->paginate(5);
-        return view('sous_menus/utilisateur',compact('utilisateur') );
+        $utilisateurs = Utilisateur::orderBy("nom","asc")->paginate(5);
+        return view('sous_menus/utilisateur',compact('utilisateurs') );
     }
     public function create (){
         $groupes =Groupe::all();
@@ -37,5 +38,11 @@ class UtilisateurController extends Controller
                 "email"=>$request->email,
         ]);
             return back()->with("success", "Utilisateur ajouté avec success");
+    }
+
+    public function delete($code_user){
+        $affected = DB::delete('DELETE FROM utilisateur WHERE code_user = ?',[$code_user]);
+        if($affected>0)
+        return back()->with("success", "suppression réussie");
     }
 }

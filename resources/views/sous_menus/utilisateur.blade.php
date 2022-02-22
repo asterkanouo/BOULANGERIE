@@ -3,6 +3,19 @@
 <div class="my-3 p-3 bg-body rounded shadow-sm">
     <h3 class="d-flex bg-primary justify-content-center pb-2 mb-4 ">Listes des utilisateurs</h3>
       <div class=" mt-4">
+      @if(session()->has("success"))
+      <h3 class=" alert alert-success">
+      {{session()->get('success')}}
+      </h3>
+     @endif 
+          @if($errors->any())
+    <ul class="alert alert-danger">
+        @foreach($errors->all() as $error)
+        <li>{{($error)}}</li>
+        @endforeach
+    </ul>
+    @endif
+
       <div class = "d-flex  justify-content-end mb-2">
       <a href="{{route('utilisateur.create')}}" class = "btn btn-success">Ajouter un utilisateur</a>
       </div>
@@ -16,15 +29,16 @@
     </tr>
   </thead>
   <tbody>
-  @foreach($utilisateur as $utilisateurs)
+  @foreach($utilisateurs as $utilisateur)
     <tr>
       <!-- <th scope="row">{{$loop->index+1}}</th> -->
-      <td>{{$utilisateurs->compte}}</td>
-      <td>{{$utilisateurs->nom}}</td>
-      <td>{{$utilisateurs->prenom}}</td>
+      <td>{{$utilisateur->compte}}</td>
+      <td>{{$utilisateur->nom}}</td>
+      <td>{{$utilisateur->prenom}}</td>
       <td>
       <a href="#" class= "btn btn-info">Editer</a>
-      <a href="#" class= "btn btn-danger"  >Supprimer</a>
+      <a href="/utilisateur.delete/{{$utilisateur->code_user}}"  class= "btn btn-danger"  onclick="return confirm('voulez-vous vraiment supprimer l'ulilisateur $utilisateur->nom ?');">Supprimer</a>
+      
       </td>
     </tr>
     @endforeach
@@ -32,7 +46,7 @@
   
 </table>
 <div class = "d-flex justify-content-end mb-2">
-  {{($utilisateur->links())}}
+  {{($utilisateurs->links())}}
 </div>
       </div>
     <small class="d-block text-end mt-3">

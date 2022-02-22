@@ -3,6 +3,20 @@
 <div class="my-3 p-3 bg-body rounded shadow-sm">
     <h3 class="d-flex bg-primary justify-content-center pb-2 mb-4 ">groupe utilisateurs</h3>
       <div class=" mt-4">
+
+      @if(session()->has("success"))
+      <h3 class=" alert alert-success">
+      {{session()->get('success')}}
+      </h3>
+     @endif 
+          @if($errors->any())
+    <ul class="alert alert-danger">
+        @foreach($errors->all() as $error)
+        <li>{{($error)}}</li>
+        @endforeach
+    </ul>
+    @endif
+
       <div class = "d-flex  justify-content-end mb-2">
       <a href="{{route('groupe.create')}}" class = "btn btn-success">Ajouter un groupe</a>
       </div>
@@ -22,7 +36,7 @@
       <td>{{$groupe->libelle}}</td>
       <td>
       <a href="#" class= "btn btn-info">Editer</a>
-      <a href="#" class= "btn btn-danger"  >Supprimer</a>
+      <a href="/groupe.delete/{{$groupe->code_groupe}}" class= "btn btn-danger"  >Supprimer</a>
       </td>
     </tr>
     @endforeach
