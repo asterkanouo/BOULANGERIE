@@ -37,7 +37,7 @@
       <td>{{$utilisateur->prenom}}</td>
       <td>
       <a href="#" class= "btn btn-info">Editer</a>
-      <a href="/utilisateur.delete/{{$utilisateur->code_user}}"  class= "btn btn-danger"  onclick="return confirm('voulez-vous vraiment supprimer l'ulilisateur $utilisateur->nom ?');">Supprimer</a>
+      <a href="/utilisateur.delete/{{$utilisateur->code_user}}" class= "btn btn-danger" onclick="return confirm('voulez-vous vraiment supprimer cet utilisateur?')">Supprimer</a>
       
       </td>
     </tr>

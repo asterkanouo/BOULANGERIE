@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UtilisateurController;
 use App\Http\Controllers\GroupeController;
+use App\Http\Controllers\ClientsController;
 
 
 
@@ -31,7 +32,8 @@ Route::get('/groupe.create',[GroupeController::class,"create"])->name("groupe.cr
 Route::post('/groupe.create',[GroupeController::class,"store"])->name("groupe.ajouter");
 Route::get('/groupe.delete/{code_groupe}',[GroupeController::class,"delete"])->name("groupe.delete");
 
-route::get('/nouvelle_facture', function(){
-    return view('/sous_menus/nouvelle_facture');
-})->name('nouvelle_facture');
+Route::get('/clients',[ClientsController::class,"index"])->name("clients");
+Route::get('/clients.create',[ClientsController::class,"create"])->name("clients.create");
+Route::post('/clients.create',[ClientsController::class,"store"])->name("clients.ajouter");
+Route::get('/clients.delete/{code_user}',[ClientsController::class,"delete"])->name("clients.delete");
 

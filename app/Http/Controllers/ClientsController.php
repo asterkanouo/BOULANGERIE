@@ -1,20 +1,20 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Groupe;
+use App\Models\Depot;
 use Illuminate\Http\Request;
-use App\Models\Utilisateur;
+use App\Models\Clients;
 use Illuminate\Support\Facades\DB;
 
-class UtilisateurController extends Controller
+class ClientsController extends Controller
 {
     public function index (){
-        $utilisateurs = Utilisateur::orderBy("nom","asc")->paginate(5);
-        return view('sous_menus/utilisateur',compact('utilisateurs') );
+        $clients = Clients::orderBy("nom","asc")->paginate(10);
+        return view('sous_menus/clients',compact('clients') );
     }
     public function create (){
-        $groupes =Groupe::all();
-        return view('sous_menus/utilisateurCreate',compact('groupes') );
+        $depots =Depot::all();
+        return view('sous_menus/clientsCreate',compact('Depots') );
     }
 
    
@@ -25,27 +25,24 @@ class UtilisateurController extends Controller
             "password"=>"required",
             "nom"=>"required",
             "prenom"=>"required",
-            "groupe"=>"required",
+            "depot"=>"required",
             "statut"=>"required",
         ]);
-        Utilisateur::create([
+        clients::create([
                 "compte"=>$request->compte,
                 "psw"=>$request->password,
                 "nom"=>$request->nom,
                 "prenom"=>$request->prenom,
-                "code_groupe"=>$request->groupe,
+                "code_depot"=>$request->depot,
                 "statut"=>$request->statut,
                 "email"=>$request->email,
         ]);
-            return back()->with("success", "Utilisateur ajouté avec success");
+            return back()->with("success", "clients ajouté avec success");
     }
 
     public function delete($code_user){
-        $affected = DB::delete('DELETE FROM utilisateur WHERE code_user = ?',[$code_user]);
+        $affected = DB::delete('DELETE FROM clients WHERE codeclient = ?',[$code_user]);
         if($affected>0)
         return back()->with("success", "suppression réussie");
     }
-
-    
 }
-
