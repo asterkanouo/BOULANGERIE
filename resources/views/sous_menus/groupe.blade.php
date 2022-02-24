@@ -1,7 +1,7 @@
-@extends('layouts.master')
+@extends('welcome')
 @section('content')
-<div class="my-3 p-3 bg-body rounded shadow-sm">
-    <h3 class="d-flex bg-primary justify-content-center pb-2 mb-4 ">groupe utilisateurs</h3>
+<div class="col-12 my-3 p-3 bg-body rounded shadow-sm">
+<h1 class="d-flex justify-content-center pb-2 mb-2 "><b><u> Groupes utilisateurs</u></b></h1>
       <div class=" mt-4">
 
       @if(session()->has("success"))
@@ -42,9 +42,4 @@
     @endforeach
   </tbody>
 </table>
-      </div>
-    <small class="d-block text-end mt-3">
-      <a href="{{route('welcome')}}"><h4>page d'accueil</h4></a>
-    </small>
-  </div>
   @endsection

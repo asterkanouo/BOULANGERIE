@@ -1,7 +1,7 @@
-@extends('layouts.master')
+@extends('welcome')
 @section('content')
-<div class="my-3 p-3 bg-body rounded shadow-sm">
-    <h3 class="d-flex bg-primary justify-content-center pb-2 mb-4 ">Listes des clients</h3>
+<div class=" col-12  bg-body rounded shadow-sm">
+<h1 class="d-flex justify-content-center pb-2 mb-2 "><b><u> Listes des clients</u></b></h1>
       <div class=" mt-4">
       @if(session()->has("success"))
       <h3 class=" alert alert-success">
@@ -20,7 +20,7 @@
       <a href="{{route('clients.create')}}" class = "btn btn-success">Ajouter un client</a>
       </div>
       <table class="table table-bordered table-hover">
-  <thead class=" bg-info">
+  <thead class=" bg-success">
     <tr>
       <th scope="col">Nom</th>
       <th scope="col">Prenom</th>
@@ -54,9 +54,4 @@
 <div class = "d-flex justify-content-end mb-2">
   {{($clients->links())}}
 </div>
-      </div>
-    <small class="d-block text-end mt-3">
-      <a href="{{route('welcome')}}"><h4>page d'accueil</h4></a>
-    </small>
-  </div>
   @endsection

@@ -1,7 +1,7 @@
-@extends('layouts.master')
+@extends('welcome')
 @section('content')
-<div class="my-3 p-3 bg-body rounded shadow-sm">
-    <h3 class="d-flex bg-primary justify-content-center pb-2 mb-4 ">Listes des utilisateurs</h3>
+<div class="col-12 bg-body rounded shadow-sm">
+    <h1 class="d-flex justify-content-center pb-2 mb-2 "><b><u> Listes des utilisateurs</u></b></h1>
       <div class=" mt-4">
       @if(session()->has("success"))
       <h3 class=" alert alert-success">
@@ -45,12 +45,8 @@
   </tbody>
   
 </table>
+
 <div class = "d-flex justify-content-end mb-2">
   {{($utilisateurs->links())}}
 </div>
-      </div>
-    <small class="d-block text-end mt-3">
-      <a href="{{route('welcome')}}"><h4>page d'accueil</h4></a>
-    </small>
-  </div>
   @endsection

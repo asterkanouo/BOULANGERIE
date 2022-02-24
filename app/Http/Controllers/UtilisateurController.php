@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class UtilisateurController extends Controller
 {
     public function index (){
-        $utilisateurs = Utilisateur::orderBy("nom","asc")->paginate(5);
+        $utilisateurs = Utilisateur::orderBy("nom","asc")->paginate(10);
         return view('sous_menus/utilisateur',compact('utilisateurs') );
     }
     public function create (){

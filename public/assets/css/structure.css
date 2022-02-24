@@ -1088,7 +1088,7 @@ code { color: #e7515a; }
     border-radius: 0;
 }
 .footer-wrapper .footer-section p {
-    margin-bottom: 0;
+    margin-bottom: 500;
     color: #515365;
     font-size: 13px;
     letter-spacing: 1px;
