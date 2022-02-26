@@ -57,7 +57,7 @@
   </div>
   <div class="d-flex justify-content-center ">
   <button type="submit" class="btn but">Enregistrer</button>
-  <a  href="{{route('utilisateur')}}" class="btn btn-danger">Retour</a>
+  <a  href="{{route('utilisateur')}}" class="btn btn-danger ml-4">Retour</a>
   </div>
 </form>
 

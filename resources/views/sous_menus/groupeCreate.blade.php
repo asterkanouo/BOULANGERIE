@@ -24,7 +24,7 @@
   </div>
   <div class="d-flex justify-content-center mt-4">
   <button type="submit" class="btn btn-success">Enregistrer</button>
-  <a  href="{{route('groupe')}}" class="btn btn-danger">Retour</a>
+  <a  href="{{route('groupe')}}" class=" ml-4 btn btn-danger">Retour</a>
   </div>
 </form>
 

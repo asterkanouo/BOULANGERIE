@@ -1,6 +1,16 @@
 @extends('welcome')
 @section('content')
-<div class="container-fluid my-3 p-3 bg-body rounded shadow-sm">
+<div class="container-fluid bg-body rounded shadow-sm">
+<nav class="navbar bg-dark ">
+<ul class="nav">
+  <li class="nav-item">
+  <a href="{{route('groupe.create')}}" class = "navbar-brand text-white">Ajouter un groupe</a>
+  </li>
+  <li class="nav-item ml-4">
+  <a class="navbar-brand text-white" href="#">Opérations</a>
+  </li>
+  </ul>
+</nav>
 <h1 class="d-flex justify-content-center pb-2 mb-4"><b><u> Groupes utilisateurs</u></b></h1>
       <div class=" mt-4">
 
@@ -16,10 +26,6 @@
         @endforeach
     </ul>
     @endif
-
-      <div class = "d-flex  justify-content-end mb-2">
-      <a href="{{route('groupe.create')}}" class = "btn btn-info">Ajouter un groupe</a>
-      </div>
       <table class="table table-bordered table-hover">
   <thead class="  bg-success but1">
     <tr>

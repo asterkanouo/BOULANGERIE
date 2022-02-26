@@ -1,6 +1,16 @@
 @extends('welcome')
 @section('content')
-<div class="container-fluid my-3 p-3 bg-body rounded shadow-sm">
+<div class="container-fluid bg-body rounded shadow-sm">
+<nav class="navbar bg-dark ">
+<ul class="nav">
+  <li class="nav-item">
+  <a href="{{route('matiere_p.create')}}" class = "navbar-brand text-white">Ajouter une matiere_p</a>
+  </li>
+  <li class="nav-item ml-4">
+  <a class="navbar-brand text-white" href="#">Opérations</a>
+  </li>
+  </ul>
+</nav>
 <h1 class="d-flex justify-content-center pb-2 mb-2 "><b><u> Liste des Matières premières</u></b></h1>
       <div class=" mt-4">
       @if(session()->has("success"))
@@ -15,10 +25,6 @@
         @endforeach
     </ul>
     @endif
-
-      <div class = "d-flex  justify-content-end mb-2">
-      <a href="{{route('matiere_p.create')}}" class = "btn btn-info">Ajouter une matiere_p</a>
-      </div>
       <table class="table table-bordered table-hover">
   <thead class=" bg-success">
     <tr>
@@ -52,5 +58,6 @@
 </table>
 <div class = "d-flex justify-content-end mb-2">
   {{($matiere_ps->links())}}
+</div>
 </div>
   @endsection

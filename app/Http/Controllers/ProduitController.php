@@ -12,7 +12,7 @@ class ProduitController extends Controller
         return view('sous_menus/produit',compact('produits') );
     }
     public function create (){
-        $produit =Produit::all();
+        $produits =Produit::all();
         return view('sous_menus/produitCreate',compact('produits') );
     }
 }
