@@ -1,7 +1,7 @@
 @extends('welcome')
 @section('content')
 <div class="container-fluid my-3 p-3 bg-body rounded shadow-sm">
-<h1 class="d-flex justify-content-center pb-2 mb-2 "><b><u> Listes des clients</u></b></h1>
+<h1 class="d-flex justify-content-center pb-2 mb-2 "><b><u> Liste des Matières premières</u></b></h1>
       <div class=" mt-4">
       @if(session()->has("success"))
       <h3 class=" alert alert-success">
@@ -17,34 +17,32 @@
     @endif
 
       <div class = "d-flex  justify-content-end mb-2">
-      <a href="{{route('clients.create')}}" class = "btn btn-info">Ajouter un client</a>
+      <a href="{{route('matiere_p.create')}}" class = "btn btn-info">Ajouter une matiere_p</a>
       </div>
       <table class="table table-bordered table-hover">
   <thead class=" bg-success">
     <tr>
       <th scope="col">N°</th>
-      <th scope="col">Nom</th>
-      <th scope="col">Prenom</th>
-      <th scope="col">Type</th>
-      <th scope="col">Téléphone</th>
-      <th scope="col">Dépôt</th>
-      <th scope="col">Type Client</th>
+      <th scope="col">Désignation</th>
+      <th scope="col">Unité_consommation</th>
+      <th scope="col">Prix d'achat</th>
+      <th scope="col">Unite d'achat/stock</th>
+      <th scope="col">CMUP</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
-  @foreach($clients as $client)
+  @foreach($matiere_ps as $matiere_p)
     <tr>
       <th scope="row">{{$loop->index+1}}</th>
-      <td>{{$client->nom}}</td>
-      <td>{{$client->prenom}}</td>
-      <td>{{$client->type_client}}</td>
-      <td>{{$client->telephone}}</td>
-      <td>{{$client->code_depot}}</td>
-      <td>{{$client->types}}</td>
+      <td>{{$matiere_p->element}}</td>
+      <td>{{$matiere_p->unite_consommation}}</td>
+      <td>{{$matiere_p->prix_achat}}</td>
+      <td>{{$matiere_p->unite_achat}}</td>
+      <td>{{$matiere_p->cmup}}</td>
       <td>
       <a href="#" class= "btn btn-info">Editer</a>
-      <a href="/client.delete/{{$client->code_user}}"  class= "btn btn-danger"  onclick="return confirm('voulez-vous vraiment supprimer ce client?')">Supprimer</a>
+      <a href="/matiere_p.delete/{{$matiere_p->code_matiere}}"  class= "btn btn-danger"  onclick="return confirm('voulez-vous vraiment supprimer cette matiere_p' . $matiere_p->element'?')">Supprimer</a>
       
       </td>
     </tr>
@@ -53,6 +51,6 @@
   
 </table>
 <div class = "d-flex justify-content-end mb-2">
-  {{($clients->links())}}
+  {{($matiere_ps->links())}}
 </div>
   @endsection

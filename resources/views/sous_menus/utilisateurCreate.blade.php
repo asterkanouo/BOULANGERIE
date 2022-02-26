@@ -1,6 +1,6 @@
-@extends('layouts.master')
+@extends('welcome')
 @section('content')
-<div  class="container-fluid col-8 my-3 p-3 bg-body rounded shadow-sm ">
+<div  class="container-fluid col-4  bg-body rounded shadow-sm ">
     <h3 class="d-flex bg-primary justify-content-center pb-2 mb-4 ">Ajout d'un nouvel utilisateur</h3>
       <div class=" mt-4">
 
@@ -43,20 +43,20 @@
         @endforeach
     </select>
   </div>
-  <div class="mb-4">
+  <div class="mb-2">
       <label for="disabledSelect" class="form-label">Statut</label>
-      <select class="form-select" required name="statut">
+      <select class="form-control" required name="statut">
         <option></option>
         <option>Actif</option>
         <option>bloqué</option>
       </select>
     </div>
-    <div class="mb-3">
+    <div class="mb-2">
     <label for="exampleInputtext" class="form-label">Email</label>
     <input type="text" class="form-control" required name="email">
   </div>
-  <div class="d-flex justify-content-center mt-4">
-  <button type="submit" class="btn btn-success">Enregistrer</button>
+  <div class="d-flex justify-content-center ">
+  <button type="submit" class="btn but">Enregistrer</button>
   <a  href="{{route('utilisateur')}}" class="btn btn-danger">Retour</a>
   </div>
 </form>

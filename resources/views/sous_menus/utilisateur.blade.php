@@ -1,6 +1,6 @@
 @extends('welcome')
 @section('content')
-<div class="col-12 bg-body rounded shadow-sm">
+<div class="container-fluid my-3 p-3 bg-body rounded shadow-sm">
     <h1 class="d-flex justify-content-center pb-2 mb-2 "><b><u> Listes des utilisateurs</u></b></h1>
       <div class=" mt-4">
       @if(session()->has("success"))
@@ -17,11 +17,12 @@
     @endif
 
       <div class = "d-flex  justify-content-end mb-2">
-      <a href="{{route('utilisateur.create')}}" class = "btn btn-success">Ajouter un utilisateur</a>
+      <a href="{{route('utilisateur.create')}}" class = "btn btn-info">Ajouter un utilisateur</a>
       </div>
       <table class="table table-bordered table-hover">
-  <thead class=" bg-info">
+  <thead class="  bg-success">
     <tr>
+      <th scope="col">N°</th>
       <th scope="col">compte</th>
       <th scope="col">Nom</th>
       <th scope="col">Prenom</th>
@@ -31,7 +32,7 @@
   <tbody>
   @foreach($utilisateurs as $utilisateur)
     <tr>
-      <!-- <th scope="row">{{$loop->index+1}}</th> -->
+      <th scope="row">{{$loop->index+1}}</th>
       <td>{{$utilisateur->compte}}</td>
       <td>{{$utilisateur->nom}}</td>
       <td>{{$utilisateur->prenom}}</td>
