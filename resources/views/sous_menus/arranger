@@ -1,4 +1,27 @@
-Route::get('/marchandise',[MarchandiseController::class,"index"])->name("marchandise");
-Route::get('/marchandise.create',MarchandiseController::class,"create"])->name("marchandise.create");
-Route::post('/marchandise.create',[MarchandiseController::class,"store"])->name("marchandise.ajouter");
-Route::get('/marchandise.delete/{id_mar}',[MarchandiseController::class,"delete"])->name("marchandise.delete");
+
+<div class="mb-3  px-3">
+    <label for="exampleInputPassword1" class="form-label">Dépôt</label>
+    <select class="form-control" required name="code_depot">
+        <option value=""></option>
+        @foreach($depots as $depot)
+            <option value="{{$depot->code_depot}}">{{$depot->libelle}}</option>
+        @endforeach
+    </select>
+  </div>
+
+
+
+
+  <div class="mb-3  px-3">
+    <label for="exampleInputPassword1" class="form-label">Référence produit</label>
+    <select class="form-control" required name="produit_ref">
+        <option value=""></option>
+        @foreach($produits as $produit)
+            <option value="{{$produit->id}}">{{$produit->designation}}</option>
+        @endforeach
+    </select>
+  </div>
+
+
+
+

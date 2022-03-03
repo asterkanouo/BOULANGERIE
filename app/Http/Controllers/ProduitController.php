@@ -9,7 +9,7 @@ use App\Models\Depot;
 class ProduitController extends Controller
 {
     public function index (){
-        $produits = Produit::orderBy("designation","asc")->paginate(10);
+        $produits = Produit::orderBy("designation","asc")->paginate(100);
         return view('sous_menus/produit',compact('produits') );
     }
     public function create (){

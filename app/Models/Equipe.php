@@ -14,4 +14,10 @@ class Equipe extends Model
     public function depot(){
         return $this->belongsTo(Depot::class);
     }
+    public function produit(){
+        return $this->belongsTo(Produit::class);
+    }
+    public function matiere_p(){
+        return $this->belongsTo(Matiere_p::class);
+    }
 }
