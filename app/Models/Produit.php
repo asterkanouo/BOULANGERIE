@@ -11,4 +11,7 @@ class Produit extends Model
     protected $table = 'produit';
     //protected $fillable = ["compte","password","nom","prenom","code_groupe","statut","email"];
     public $timestamps = false;
+    public function depot(){
+        return $this->belongsTo(Depot::class);
+    }
 }

@@ -51,7 +51,7 @@
       <td>{{$client->types}}</td>
       <td>
       <a href="#" class= "btn btn-info">Editer</a>
-      <a href="/client.delete/{{$client->code_user}}"  class= "btn btn-danger"  onclick="return confirm('voulez-vous vraiment supprimer ce client?')">Supprimer</a>
+      <a href="/client.delete/{{$client->code_user}}"  class= "btn btn-danger"  onclick="return confirm('voulez-vous vraiment supprimer ce client?');">Supprimer</a>
       
       </td>
     </tr>

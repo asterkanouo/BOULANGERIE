@@ -38,12 +38,15 @@ class UtilisateurController extends Controller
                 "email"=>$request->email,
         ]);
             return back()->with("success", "Utilisateur ajouté avec success");
-    }
+          
+        }
 
-    public function delete($code_user){
+
+    public function delete($code_user, Utilisateur $utilisateur){
+        $util = $utilisateur->nom;
         $affected = DB::delete('DELETE FROM utilisateur WHERE code_user = ?',[$code_user]);
         if($affected>0)
-        return back()->with("success", "suppression réussie");
+        return back()->with("success", "l'utilisateur a été supprimé avec succès");
     }
 
     

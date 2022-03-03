@@ -10,11 +10,12 @@ class ClientsController extends Controller
 {
     public function index (){
         $clients = Clients::orderBy("nom","asc")->paginate(10);
-        return view('sous_menus/clients',compact('clients') );
+        return view('sous_menus/clients',compact('clients'));
+       
     }
     public function create (){
         $depots =Depot::all();
-        return view('sous_menus/clientsCreate',compact('Depots') );
+        return view('sous_menus/clientsCreate',compact('depots') );
     }
 
    

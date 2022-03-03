@@ -25,7 +25,7 @@ class CreateClientsTable extends Migration
             $table->text('numero')->nullable();
             $table->string('types', 20)->nullable();
             $table->integer('multi_depot_caisse')->nullable()->default(0);
-			$table->foreignId("code_depot")->constrained("depot");
+			//$table->foreignId("code_depot")->constrained("depot");
         });
         schema::enableForeignKeyConstraints();
     }

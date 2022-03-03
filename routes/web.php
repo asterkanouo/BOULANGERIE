@@ -7,7 +7,11 @@ use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\EquipeController;
 use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\Matiere_pController;
-
+use App\Http\Controllers\DepotController;
+use App\Http\Controllers\CaisseController;
+use App\Http\Controllers\PersonnelController;
+use App\Http\Controllers\FournisseurController;
+use App\Http\Controllers\MarchandiseController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -53,3 +57,28 @@ Route::get('/matiere_p',[Matiere_pController::class,"index"])->name("matiere_p")
 Route::get('/matiere_p.create',[Matiere_pController::class,"create"])->name("matiere_p.create");
 Route::post('/matiere_p.create',[Matiere_pController::class,"store"])->name("matiere_p.ajouter");
 Route::get('/matiere_p.delete/{code_matiere}',[Matiere_pController::class,"delete"])->name("matiere_p.delete");
+
+Route::get('/depot',[DepotController::class,"index"])->name("depot");
+Route::get('/depot.create',[DepotController::class,"create"])->name("depot.create");
+Route::post('/depot.create',[DepotController::class,"store"])->name("depot.ajouter");
+Route::get('/depot.delete/{code_depot}',[DepotController::class,"delete"])->name("depot.delete");
+
+Route::get('/caisse',[CaisseController::class,"index"])->name("caisse");
+Route::get('/caisse.create',[CaisseController::class,"create"])->name("caisse.create");
+Route::post('/caisse.create',[CaisseController::class,"store"])->name("caisse.ajouter");
+Route::get('/caisse.delete/{code_caisse}',[CaisseController::class,"delete"])->name("caisse.delete");
+
+Route::get('/personnel',[PersonnelController::class,"index"])->name("personnel");
+Route::get('/personnel.create',[PersonnelController::class,"create"])->name("personnel.create");
+Route::post('/personnel.create',[PersonnelController::class,"store"])->name("personnel.ajouter");
+Route::get('/personnel.delete/{code_personnel}',[PersonnelController::class,"delete"])->name("personnel.delete");
+
+Route::get('/fournisseur',[FournisseurController::class,"index"])->name("fournisseur");
+Route::get('/fournisseur.create',[FournisseurController::class,"create"])->name("fournisseur.create");
+Route::post('/fournisseur.create',[FournisseurController::class,"store"])->name("fournisseur.ajouter");
+Route::get('/fournisseur.delete/{codefournisseur}',[FournisseurController::class,"delete"])->name("fournisseur.delete");
+
+Route::get('/marchandise',[MarchandiseController::class,"index"])->name("marchandise");
+Route::get('/marchandise.create',[MarchandiseController::class,"create"])->name("marchandise.create");
+Route::post('/marchandise.create',[MarchandiseController::class,"store"])->name("marchandise.ajouter");
+Route::get('/marchandise.delete/{id_mar}',[MarchandiseController::class,"delete"])->name("marchandise.delete");

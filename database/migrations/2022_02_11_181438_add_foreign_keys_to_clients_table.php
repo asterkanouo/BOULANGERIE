@@ -14,7 +14,7 @@ class AddForeignKeysToClientsTable extends Migration
     public function up()
     {
         Schema::table('clients', function (Blueprint $table) {
-            $table->foreign(['code_depot'], 'clients_ibfk_1')->references(['code_depot'])->on('depot');
+         $table->foreign(['code_depot'], 'clients_ibfk_1')->references(['code_depot'])->on('depot');
         });
     }
 

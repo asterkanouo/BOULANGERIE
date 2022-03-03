@@ -46,7 +46,7 @@
       <td>{{$equipe->code_depot}}</td>
       <td>
       <a href="#" class= "btn btn-info">Editer</a>
-      <a href="/equipe.delete/{{$equipe->code_equipe}}"  class= "btn btn-danger"  onclick="return confirm('voulez-vous vraiment supprimer cette equipe' . $equipe->libelle'?')">Supprimer</a>
+      <a href="/equipe.delete/{{$equipe->code_equipe}}"  class= "btn btn-danger"  onclick="return confirm('voulez-vous vraiment supprimer cette equipe?');">Supprimer</a>
       
       </td>
     </tr>

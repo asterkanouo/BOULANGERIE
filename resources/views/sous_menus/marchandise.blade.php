@@ -1,17 +1,18 @@
 @extends('welcome')
 @section('content')
-<div class="container-fluid bg-body rounded shadow-sm">
+
+<div class="container-fluid bg-body rounded shadow-sm ">
 <nav class="navbar bg-dark ">
-<ul class="nav">
+<ul class="nav nav-pills nav-fill">
   <li class="nav-item">
-  <a href="{{route('matiere_p.create')}}" class = "navbar-brand text-white">Ajouter une matiere_p</a>
+  <a href="{{route('marchandise.create')}}" class = "navbar-brand text-white">Ajouter une marchandise</a>
   </li>
   <li class="nav-item ml-4">
   <a class="navbar-brand text-white" href="#">Opérations</a>
   </li>
   </ul>
 </nav>
-<h1 class="d-flex justify-content-center pb-2 mb-2 "><b><u> Liste des Matières premières</u></b></h1>
+<h1 class="d-flex justify-content-center pb-2 mb-2 "><b><u> Liste des marchandises</u></b></h1>
       <div class=" mt-4">
       @if(session()->has("success"))
       <h3 class=" alert alert-success">
@@ -29,26 +30,28 @@
   <thead class=" bg-success">
     <tr>
       <th scope="col">N°</th>
+      <th scope="col">Reférence</th>
       <th scope="col">Désignation</th>
-      <th scope="col">Unité_consommation</th>
-      <th scope="col">Prix d'achat</th>
-      <th scope="col">Unite d'achat/stock</th>
+      <th scope="col">prix achat</th>
+      <th scope="col">prix gros</th>
+      <th scope="col">prix détail</th>
       <th scope="col">CMUP</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
-  @foreach($matiere_ps as $matiere_p)
+  @foreach($marchandises as $marchandise)
     <tr>
       <th scope="row">{{$loop->index+1}}</th>
-      <td>{{$matiere_p->element}}</td>
-      <td>{{$matiere_p->unite_consommation}}</td>
-      <td>{{$matiere_p->prix_achat}}</td>
-      <td>{{$matiere_p->unite_achat}}</td>
-      <td>{{$matiere_p->cmup}}</td>
+      <td>{{$marchandise->reference}}</td>
+      <td>{{$marchandise->designation}}</td>
+      <td>{{$marchandise->prix_achat}}</td>
+      <td>{{$marchandise->prix_gros}}</td>
+      <td>{{$marchandise->prix_detail}}</td>
+      <td>{{$marchandise->cmup}}</td>
       <td>
       <a href="#" class= "btn btn-info">Editer</a>
-      <a href="/matiere_p.delete/{{$matiere_p->code_matiere}}"  class= "btn btn-danger"  onclick="return confirm('voulez-vous vraiment supprimer cette matiere_p?');">Supprimer</a>
+      <a href="/marchandise.delete/{{$marchandise->id_mar}}"  class= "btn btn-danger"  onclick="return confirm('voulez-vous vraiment supprimer cette marchandise?');">Supprimer</a>
       
       </td>
     </tr>
@@ -57,7 +60,7 @@
   
 </table>
 <div class = "d-flex justify-content-end mb-2">
-  {{($matiere_ps->links())}}
+  {{($marchandises->links())}}
 </div>
 </div>
   @endsection

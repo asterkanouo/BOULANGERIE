@@ -1,7 +1,10 @@
 @extends('welcome')
 @section('content')
-<div  class="container-fluid col-4  bg-body rounded shadow-sm ">
-    <h3 class="d-flex bg-primary justify-content-center pb-2 mb-4 ">Ajout d'un nouvel utilisateur</h3>
+<div class=" col-8 card bg-body rounded shadow-sm ">
+    <div class=" card-header d-flex bg-primary justify-content-center pb-2 mb-4 ">
+    <h1>Ajout d'un nouvel utilisateur</h1>
+    </div>
+     <div class="card-body"> 
       <div class=" mt-4">
 
       @if(session()->has("success"))
@@ -16,13 +19,15 @@
         @endforeach
     </ul>
     @endif
+    </div>
       <form method="post" action="{{route('utilisateur.ajouter')}}">
       @csrf
+      <div class="row row-cols-1 row-cols-md-2">
   <div class="mb-3">
     <label for="exampleInputtext" class="form-label">Compte</label>
     <input type="text" class="form-control" required name="compte">
   </div>
-  <div class="mb-3">
+  <div class="mb-3 px-3">
     <label for="exampleInputPassword1" class="form-label">Password</label>
     <input type="password" class="form-control" id="exampleInputPassword1" name="password">
   </div>
@@ -30,11 +35,14 @@
     <label for="exampleInputtext" class="form-label">Nom</label>
     <input type="text" class="form-control" required name="nom">
   </div>
-  <div class="mb-3">
+  <div class="mb-3 px-3">
     <label for="exampleInputtext" class="form-label">Prenom</label>
     <input type="text" class="form-control" required name="prenom">
   </div>
-  <div class="mb-3">
+  </div>
+  
+  <div class="row row-cols-1 row-cols-md-2">
+  <div class="mb-3 ">
     <label for="exampleInputPassword1" class="form-label">Groupe</label>
     <select class="form-control" required name="groupe">
         <option value=""></option>
@@ -43,7 +51,7 @@
         @endforeach
     </select>
   </div>
-  <div class="mb-2">
+  <div class="mb-3 px-3 ">
       <label for="disabledSelect" class="form-label">Statut</label>
       <select class="form-control" required name="statut">
         <option></option>
@@ -51,15 +59,17 @@
         <option>bloqué</option>
       </select>
     </div>
+    
     <div class="mb-2">
     <label for="exampleInputtext" class="form-label">Email</label>
     <input type="text" class="form-control" required name="email">
   </div>
+  </div>
   <div class="d-flex justify-content-center ">
-  <button type="submit" class="btn but">Enregistrer</button>
-  <a  href="{{route('utilisateur')}}" class="btn btn-danger ml-4">Retour</a>
+  <button type="submit" class="btn btn-success mr-4">Enregistrer</button>
+  <a  href="{{route('utilisateur')}}" class="btn btn-danger">Retour</a>
   </div>
 </form>
-
-  </div>
+</div>
+  
   @endsection

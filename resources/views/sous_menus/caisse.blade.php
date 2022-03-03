@@ -4,14 +4,14 @@
 <nav class="navbar bg-dark ">
 <ul class="nav">
   <li class="nav-item">
-  <a href="{{route('matiere_p.create')}}" class = "navbar-brand text-white">Ajouter une matiere_p</a>
+  <a href="{{route('caisse.create')}}" class = "navbar-brand text-white">Nouvelle caisse</a>
   </li>
   <li class="nav-item ml-4">
   <a class="navbar-brand text-white" href="#">Opérations</a>
   </li>
   </ul>
 </nav>
-<h1 class="d-flex justify-content-center pb-2 mb-2 "><b><u> Liste des Matières premières</u></b></h1>
+<h1 class="d-flex justify-content-center pb-2 mb-2 "><b><u>Etat des caisses</u></b></h1>
       <div class=" mt-4">
       @if(session()->has("success"))
       <h3 class=" alert alert-success">
@@ -29,26 +29,20 @@
   <thead class=" bg-success">
     <tr>
       <th scope="col">N°</th>
-      <th scope="col">Désignation</th>
-      <th scope="col">Unité_consommation</th>
-      <th scope="col">Prix d'achat</th>
-      <th scope="col">Unite d'achat/stock</th>
-      <th scope="col">CMUP</th>
+      <th scope="col">Libelle</th>
+      <th scope="col">Dépôts</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
-  @foreach($matiere_ps as $matiere_p)
+  @foreach($caisses as $caisse)
     <tr>
       <th scope="row">{{$loop->index+1}}</th>
-      <td>{{$matiere_p->element}}</td>
-      <td>{{$matiere_p->unite_consommation}}</td>
-      <td>{{$matiere_p->prix_achat}}</td>
-      <td>{{$matiere_p->unite_achat}}</td>
-      <td>{{$matiere_p->cmup}}</td>
+      <td>{{$caisse->libelle}}</td>
+      <td>{{$caisse->code_depot}}</td>
       <td>
       <a href="#" class= "btn btn-info">Editer</a>
-      <a href="/matiere_p.delete/{{$matiere_p->code_matiere}}"  class= "btn btn-danger"  onclick="return confirm('voulez-vous vraiment supprimer cette matiere_p?');">Supprimer</a>
+      <a href="/caisse.delete/{{$caisse->code_caisse}}"  class= "btn btn-danger"  onclick="return confirm('voulez-vous vraiment supprimer cette caisse?');">Supprimer</a>
       
       </td>
     </tr>
@@ -57,7 +51,7 @@
   
 </table>
 <div class = "d-flex justify-content-end mb-2">
-  {{($matiere_ps->links())}}
+  {{($caisses->links())}}
 </div>
 </div>
   @endsection

@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Caisse;
 use Illuminate\Http\Request;
-use App\Models\Depot;
 
-class DepotController extends Controller
+class CaisseController extends Controller
 {
     public function index (){
-        $depots = depot::orderBy("libelle","asc")->paginate(10);
-        return view('sous_menus/depot',compact('depots') );
+        $caisses = Caisse::orderBy("libelle","asc")->paginate(10);
+        return view('sous_menus/caisse',compact('caisses') );
     }
     public function create (){
         $depots =Depot::all();
         return view('sous_menus/depotCreate',compact('depots') );
     }
-
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Produit;
+use App\Models\Depot;
 
 class ProduitController extends Controller
 {
@@ -12,7 +13,7 @@ class ProduitController extends Controller
         return view('sous_menus/produit',compact('produits') );
     }
     public function create (){
-        $produits =Produit::all();
-        return view('sous_menus/produitCreate',compact('produits') );
+        $depots =Depot::all();
+        return view('sous_menus/produitCreate',compact('depots') );
     }
 }
