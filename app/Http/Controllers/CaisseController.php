@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Caisse;
+use App\Models\Depot;
 use Illuminate\Http\Request;
 
 class CaisseController extends Controller
@@ -13,6 +14,6 @@ class CaisseController extends Controller
     }
     public function create (){
         $depots =Depot::all();
-        return view('sous_menus/depotCreate',compact('depots') );
+        return view('sous_menus/caisseCreate',compact('depots') );
     }
 }

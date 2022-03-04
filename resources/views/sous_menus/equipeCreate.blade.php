@@ -57,10 +57,6 @@
         @endforeach
     </select>
   </div>
-  </div>
-  
-  <div class="row row-cols-1 row-cols-md-2">
-  
   <div class="mb-3">
     <label for="exampleInputtext" class="form-label">standard de production</label>
     <input type="text" class="form-control" required name="standard_production">
@@ -78,9 +74,6 @@
     <label for="exampleInputtext" class="form-label">Clé de ventillation</label>
     <input type="text" class="form-control" required name="cle_ventillation">
   </div>
-  
-  
-  
     </div>
   <div class="d-flex justify-content-center ">
   <button type="submit" class="btn btn-success mr-4">Enregistrer</button>

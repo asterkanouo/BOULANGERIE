@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Personnel;
+use App\Models\Depot;
 
 class PersonnelController extends Controller
 {
@@ -13,6 +14,6 @@ class PersonnelController extends Controller
     }
     public function create (){
         $depots =Depot::all();
-        return view('sous_menus/depotCreate',compact('depots') );
+        return view('sous_menus/personnelCreate',compact('depots') );
     }
 }

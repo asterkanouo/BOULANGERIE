@@ -39,9 +39,6 @@
     <label for="exampleInputtext" class="form-label">Prenom</label>
     <input type="text" class="form-control" required name="prenom">
   </div>
-  </div>
-  
-  <div class="row row-cols-1 row-cols-md-2">
   <div class="mb-3 ">
     <label for="exampleInputPassword1" class="form-label">Groupe</label>
     <select class="form-control" required name="groupe">

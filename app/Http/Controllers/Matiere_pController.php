@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Matiere_p;
+use App\Models\Depot;
 class Matiere_pController extends Controller
 {
     public function index (){
@@ -11,7 +12,7 @@ class Matiere_pController extends Controller
         return view('sous_menus/Matiere_p',compact('matiere_ps') );
     }
     public function create (){
-        $matiere_ps =Matiere_p::all();
-        return view('sous_menus/matiere_pCreate',compact('matiere_ps') );
+        $depots =Depot::all();
+        return view('sous_menus/matiere_pCreate',compact('depots') );
     }
 }

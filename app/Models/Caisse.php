@@ -11,8 +11,8 @@ class Caisse extends Model
     protected $table = 'caisse';
     //protected $fillable = ["compte","password","nom","prenom","code_groupe","statut","email"];
     public $timestamps = false;
-    public function groupe(){
-        return $this->belongsTo(Groupe::class);
+    public function depot(){
+        return $this->belongsTo(Caisse::class);
             
         }
 }
