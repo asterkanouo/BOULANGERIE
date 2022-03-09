@@ -44,14 +44,10 @@
     <input type="text" class="form-control" required name="nb_membre">
   </div>
   <div class="mb-3 px-3">
-    <label for="exampleInputPassword1" class="form-label">Dépôt</label>
-    <select class="form-control" required name="code_depot">
-        <option value=""></option>
-        @foreach($depots as $depot)
-            <option value="{{$depot->code_depot}}">{{$depot->libelle}}</option>
-        @endforeach
-    </select>
+    <label for="exampleInputtext" class="form-label">Date d'embauche</label>
+    <input type="text" id="datepicker" readonly="readonly" class="form-control" required name="cle_ventillation">
   </div>
+  
   
   
   <div class="mb-3">
@@ -82,16 +78,33 @@
     <option>Bloqué</option>
   </select>
 </div>
-  <div class="mb-3 px-3">
-    <label for="exampleInputtext" class="form-label">Date d'embauche</label>
-    <input type="text" value="{{date('Y-M-D')}}" class="form-control" required name="cle_ventillation">
+<div class="mb-3 px-3">
+    <label for="exampleInputPassword1" class="form-label">Dépôt</label>
+    <select class="form-control" required name="code_depot">
+        <option value=""></option>
+        @foreach($depots as $depot)
+            <option value="{{$depot->code_depot}}">{{$depot->libelle}}</option>
+        @endforeach
+    </select>
   </div>
+  <div class="mb-3">
+  <label for="disabledSelect" class="form-label">Type contrat</label>
+  <select class="form-control" required name="type_client">
+    <option></option>
+    <option>CDI</option>
+    <option>CDD</option>
+  </select>
+</div>
+
     </div>
   <div class="d-flex justify-content-center ">
   <button type="submit" class="btn btn-success mr-4">Enregistrer</button>
   <a  href="{{route('personnel')}}" class="btn btn-danger">Retour</a>
   </div>
 </form>
+<script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">></script>
+ <script type = "text/javascript" src="js/jquery-ui.min.js">></script>
+ <script type = "text/javascript" src="js/main.js">></script>
 </div>
   
   @endsection

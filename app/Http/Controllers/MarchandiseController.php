@@ -11,4 +11,8 @@ class MarchandiseController extends Controller
         $marchandises = Marchandise::orderBy("designation","asc")->paginate(10);
         return view('sous_menus/marchandise',compact('marchandises') );
     }
+    public function create (){
+        $marchandises = Marchandise::all();
+        return view('sous_menus/marchandiseCreate',compact('marchandises') );
+    }
 }

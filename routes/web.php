@@ -8,9 +8,9 @@ use App\Http\Controllers\EquipeController;
 use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\Matiere_pController;
 use App\Http\Controllers\DepotController;
+use App\Http\Controllers\FournisseurController;
 use App\Http\Controllers\CaisseController;
 use App\Http\Controllers\PersonnelController;
-use App\Http\Controllers\FournisseurController;
 use App\Http\Controllers\MarchandiseController;
 
 Route::get('/', function () {
@@ -82,3 +82,4 @@ Route::get('/marchandise',[MarchandiseController::class,"index"])->name("marchan
 Route::get('/marchandise.create',[MarchandiseController::class,"create"])->name("marchandise.create");
 Route::post('/marchandise.create',[MarchandiseController::class,"store"])->name("marchandise.ajouter");
 Route::get('/marchandise.delete/{id_mar}',[MarchandiseController::class,"delete"])->name("marchandise.delete");
+

@@ -24,6 +24,7 @@ class CreateFournisseurTable extends Migration
             $table->integer('code_depot')->nullable();
             $table->text('numero')->nullable();
         });
+        schema::enableForeignKeyConstraints();
     }
 
     /**

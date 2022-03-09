@@ -1,27 +1,6 @@
 
-<div class="mb-3  px-3">
-    <label for="exampleInputPassword1" class="form-label">Dépôt</label>
-    <select class="form-control" required name="code_depot">
-        <option value=""></option>
-        @foreach($depots as $depot)
-            <option value="{{$depot->code_depot}}">{{$depot->libelle}}</option>
-        @endforeach
-    </select>
-  </div>
 
-
-
-
-  <div class="mb-3  px-3">
-    <label for="exampleInputPassword1" class="form-label">Référence produit</label>
-    <select class="form-control" required name="produit_ref">
-        <option value=""></option>
-        @foreach($produits as $produit)
-            <option value="{{$produit->id}}">{{$produit->designation}}</option>
-        @endforeach
-    </select>
-  </div>
-
-
-
-
+Route::get('/fournisseur',[fournisseurController::class,"index"])->name("fournisseur");
+Route::get('/fournisseur.create',[fournisseurController::class,"create"])->name("fournisseur.create");
+Route::post('/fournisseur.create',[fournisseurController::class,"store"])->name("fournisseur.ajouter");
+Route::get('/fournisseur.delete/{code_fournisseur}',[fournisseurController::class,"delete"])->name("fournisseur.delete");

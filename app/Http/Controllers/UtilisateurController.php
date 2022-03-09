@@ -43,7 +43,6 @@ class UtilisateurController extends Controller
 
 
     public function delete($code_user, Utilisateur $utilisateur){
-        $util = $utilisateur->nom;
         $affected = DB::delete('DELETE FROM utilisateur WHERE code_user = ?',[$code_user]);
         if($affected>0)
         return back()->with("success", "l'utilisateur a été supprimé avec succès");

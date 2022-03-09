@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Fournisseur;
+use App\Models\Depot;
 
 class FournisseurController extends Controller
 {
@@ -12,7 +13,9 @@ class FournisseurController extends Controller
         return view('sous_menus/fournisseur',compact('fournisseurs') );
     }
     public function create (){
+        $fournisseurs = Fournisseur::all();
         $depots =Depot::all();
-        return view('sous_menus/depotCreate',compact('depots') );
+        return view('sous_menus/fournisseurCreate',compact('fournisseurs','depots') );
     }
+   
 }

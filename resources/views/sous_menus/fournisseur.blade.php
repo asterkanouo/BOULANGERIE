@@ -49,7 +49,7 @@
       <td>{{$fournisseur->code_depot}}</td>
       <td>
       <a href="#" class= "btn btn-info">Editer</a>
-      <a href="/fournisseur.delete/{{$fournisseur->code_user}}"  class= "btn btn-danger"  onclick="return confirm('voulez-vous vraiment supprimer ce fournisseur?');">Supprimer</a>
+      <a href="/fournisseur.delete/{{$fournisseur->code_fournisseur}}"  class= "btn btn-danger"  onclick="return confirm('voulez-vous vraiment supprimer ce fournisseur?');">Supprimer</a>
       
       </td>
     </tr>
