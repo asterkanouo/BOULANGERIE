@@ -1,7 +1,11 @@
 jQuery(function($){
-    $('#datepicker').datepicker({
+    $('#datepicker,#datepicker2').datepicker({
         dateFormat: 'yy-mm-dd',
-        minDate:0,
+        onSelect: function(date){
+
+        }
+        
     });
+    
     
 });

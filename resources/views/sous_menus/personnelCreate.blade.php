@@ -96,7 +96,7 @@
   </select>
 </div>
 
-    </div>
+  </div>
   <div class="d-flex justify-content-center ">
   <button type="submit" class="btn btn-success mr-4">Enregistrer</button>
   <a  href="{{route('personnel')}}" class="btn btn-danger">Retour</a>

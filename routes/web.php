@@ -12,6 +12,7 @@ use App\Http\Controllers\FournisseurController;
 use App\Http\Controllers\CaisseController;
 use App\Http\Controllers\PersonnelController;
 use App\Http\Controllers\MarchandiseController;
+use App\Http\Controllers\ParametreController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -31,6 +32,8 @@ route::get('/a_proposs', function(){
 Route::get('/utilisateur',[UtilisateurController::class,"index"])->name("utilisateur");
 Route::get('/utilisateur.create',[UtilisateurController::class,"create"])->name("utilisateur.create");
 Route::post('/utilisateur.create',[UtilisateurController::class,"store"])->name("utilisateur.ajouter");
+Route::get('/utilisateur.update/{code_user}',[UtilisateurController::class,"edit"])->name("utilisateur.editer");
+Route::post('/utilisateur.update/{code_user}',[UtilisateurController::class,"update"])->name("utilisateur.modifier");
 Route::get('/utilisateur.delete/{code_user}',[UtilisateurController::class,"delete"])->name("utilisateur.delete");
 
 Route::get('/groupe',[GroupeController::class,"index"])->name("groupe");
@@ -83,3 +86,8 @@ Route::get('/marchandise.create',[MarchandiseController::class,"create"])->name(
 Route::post('/marchandise.create',[MarchandiseController::class,"store"])->name("marchandise.ajouter");
 Route::get('/marchandise.delete/{id_mar}',[MarchandiseController::class,"delete"])->name("marchandise.delete");
 
+Route::get('/parametre',[ParametreController::class,"index"])->name("parametre");
+
+Route::get('/facture_fournisseur',[FournisseurController::class,"facture"])->name("facture_fournisseur");
+Route::get('/detail_fournisseur',[FournisseurController::class,"detail"])->name("detail_fournisseur");
+Route::get('/nouvel_fact_four',[FournisseurController::class,"nouvel_fact"])->name("nouvel_fact_four");
