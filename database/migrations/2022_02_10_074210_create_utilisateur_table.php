@@ -14,14 +14,14 @@ class CreateUtilisateurTable extends Migration
     public function up()
     {
         Schema::create('utilisateur', function (Blueprint $table) {
-            $table->integer('code_user', true)->index('code_user');
+            $table->integer('id', true)->index('id');
             $table->text('compte')->nullable();
-            $table->text('psw')->nullable();
+            $table->text('password')->nullable();
             $table->text('nom')->nullable();
             $table->text('prenom')->nullable();
             $table->integer('code_groupe')->nullable();
             $table->text('statut')->nullable();
-            $table->string('email', 50);
+            $table->string('email', 50)->nullable();
         });
     }
 

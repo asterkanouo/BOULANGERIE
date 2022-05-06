@@ -13,28 +13,33 @@ use App\Http\Controllers\CaisseController;
 use App\Http\Controllers\PersonnelController;
 use App\Http\Controllers\MarchandiseController;
 use App\Http\Controllers\ParametreController;
+use App\Http\Controllers\ConnexionController;
+use App\Http\Controllers\TraitementController;
 
 Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+    return view('connexion');
+})->name('login');
 
 
+Route::group([
+    'middleware'=>'App\Http\Middleware\Auth',
+], function(){
+    Route::get('/welcome', function () {
+        return view('welcome');
+    })->name('welcome');
 
+    Route::get('/dashbord', function () {
+        return view('dashbord');
+    })->name('dashbord');
 
-Route::get('/testtere', function () {
-    return view('test');
-})->name('test');
-
-route::get('/a_proposs', function(){
-    return view('about');
-})->name('about');
+Route::get('/caisse',[CaisseController::class,"index"])->name("caisse");
 
 Route::get('/utilisateur',[UtilisateurController::class,"index"])->name("utilisateur");
 Route::get('/utilisateur.create',[UtilisateurController::class,"create"])->name("utilisateur.create");
 Route::post('/utilisateur.create',[UtilisateurController::class,"store"])->name("utilisateur.ajouter");
-Route::get('/utilisateur.update/{code_user}',[UtilisateurController::class,"edit"])->name("utilisateur.editer");
-Route::post('/utilisateur.update/{code_user}',[UtilisateurController::class,"update"])->name("utilisateur.modifier");
-Route::get('/utilisateur.delete/{code_user}',[UtilisateurController::class,"delete"])->name("utilisateur.delete");
+Route::get('/utilisateur.update/{id}',[UtilisateurController::class,"edit"])->name("utilisateur.editer");
+Route::post('/utilisateur.update/{id}',[UtilisateurController::class,"update"])->name("utilisateur.modifier");
+Route::get('/utilisateur.delete/{id}',[UtilisateurController::class,"delete"])->name("utilisateur.delete");
 
 Route::get('/groupe',[GroupeController::class,"index"])->name("groupe");
 Route::get('/groupe.create',[GroupeController::class,"create"])->name("groupe.create");
@@ -44,7 +49,7 @@ Route::get('/groupe.delete/{code_groupe}',[GroupeController::class,"delete"])->n
 Route::get('/clients',[ClientsController::class,"index"])->name("clients");
 Route::get('/clients.create',[ClientsController::class,"create"])->name("clients.create");
 Route::post('/clients.create',[ClientsController::class,"store"])->name("clients.ajouter");
-Route::get('/clients.delete/{code_user}',[ClientsController::class,"delete"])->name("clients.delete");
+Route::get('/clients.delete/{id}',[ClientsController::class,"delete"])->name("clients.delete");
 
 Route::get('/equipe',[EquipeController::class,"index"])->name("equipe");
 Route::get('/equipe.create',[EquipeController::class,"create"])->name("equipe.create");
@@ -66,7 +71,7 @@ Route::get('/depot.create',[DepotController::class,"create"])->name("depot.creat
 Route::post('/depot.create',[DepotController::class,"store"])->name("depot.ajouter");
 Route::get('/depot.delete/{code_depot}',[DepotController::class,"delete"])->name("depot.delete");
 
-Route::get('/caisse',[CaisseController::class,"index"])->name("caisse");
+
 Route::get('/caisse.create',[CaisseController::class,"create"])->name("caisse.create");
 Route::post('/caisse.create',[CaisseController::class,"store"])->name("caisse.ajouter");
 Route::get('/caisse.delete/{code_caisse}',[CaisseController::class,"delete"])->name("caisse.delete");
@@ -87,7 +92,12 @@ Route::post('/marchandise.create',[MarchandiseController::class,"store"])->name(
 Route::get('/marchandise.delete/{id_mar}',[MarchandiseController::class,"delete"])->name("marchandise.delete");
 
 Route::get('/parametre',[ParametreController::class,"index"])->name("parametre");
-
+});
+Route::get('/deconnexion',[TraitementController::class,"deconnexion"])->name("deconnexion");
 Route::get('/facture_fournisseur',[FournisseurController::class,"facture"])->name("facture_fournisseur");
 Route::get('/detail_fournisseur',[FournisseurController::class,"detail"])->name("detail_fournisseur");
 Route::get('/nouvel_fact_four',[FournisseurController::class,"nouvel_fact"])->name("nouvel_fact_four");
+
+
+Route::get('/connexion',[TraitementController::class,"formulaire"])->name("connexion");
+Route::post('/connexion',[TraitementController::class,"traitement"])->name("connexion");

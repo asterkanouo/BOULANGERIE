@@ -21,7 +21,7 @@ class CreateUtilisateurTable extends Migration
             $table->text('prenom')->nullable();
             $table->integer('code_groupe')->nullable();
             $table->text('statut')->nullable();
-            $table->string('email', 50);
+            $table->string('email', 50)->nullable();
         });
     }
 

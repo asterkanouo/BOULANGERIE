@@ -1,6 +1,15 @@
+if(auth()->check()){
+             if(auth()->user()->is_admin){
+             return response()->view('welcome');
+             } 
+             else  if(auth()->user()->is_vendeur){
+             return response()->view('dashbord'); 
+             } 
+         }
 
 
-Route::get('/fournisseur',[fournisseurController::class,"index"])->name("fournisseur");
-Route::get('/fournisseur.create',[fournisseurController::class,"create"])->name("fournisseur.create");
-Route::post('/fournisseur.create',[fournisseurController::class,"store"])->name("fournisseur.ajouter");
-Route::get('/fournisseur.delete/{code_fournisseur}',[fournisseurController::class,"delete"])->name("fournisseur.delete");
+
+         
+         
+         
+->middleware('App\Http\Middleware\Auth')         

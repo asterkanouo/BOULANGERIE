@@ -42,9 +42,9 @@
       <td>{{$utilisateur->compte}}</td>
       <td>{{$utilisateur->nom}}</td>
       <td>{{$utilisateur->prenom}}</td>
-      <td><a href="/utilisateur.update/{{$utilisateur->code_user}}" class= "btn btn-info">Editer
+      <td><a href="/utilisateur.update/{{$utilisateur->id}}" class= "btn btn-info">Editer
       </a></td>
-      <td><a href="/utilisateur.delete/{{$utilisateur->code_user}}" class= "btn btn-danger" onclick="return confirm('voulez-vous vraiment supprimer cet utilisateur?');">Supprimer</a></td>
+      <td><a href="/utilisateur.delete/{{$utilisateur->id}}" class= "btn btn-danger" onclick="return confirm('voulez-vous vraiment supprimer cet utilisateur?');">Supprimer</a></td>
     </tr>
     @endforeach
   </tbody>

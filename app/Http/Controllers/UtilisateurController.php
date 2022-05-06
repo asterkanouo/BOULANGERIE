@@ -31,7 +31,7 @@ class UtilisateurController extends Controller
         ]);
         Utilisateur::create([
                 "compte"=>$request->compte,
-                "psw"=>Hash::make($request->password),
+                "password"=>Hash::make($request->password),
                 "nom"=>$request->nom,
                 "prenom"=>$request->prenom,
                 "code_groupe"=>$request->groupe,
@@ -41,13 +41,13 @@ class UtilisateurController extends Controller
             return redirect('utilisateur')->with("success", "Utilisateur ajouté avec success");
           
         }
-    public function delete($code_user){
-        $affected = DB::delete('DELETE FROM utilisateur WHERE code_user = ?',[$code_user]);
+    public function delete($id){
+        $affected = DB::delete('DELETE FROM utilisateur WHERE id = ?',[$id]);
         if($affected>0)
         return back()->with("success", "l'utilisateur a été supprimé avec succès");
     }
-public function edit($code_user){
-$utilisateur = DB::select('SELECT * FROM utilisateur WHERE code_user =?',[$code_user]);
+public function edit($id){
+$utilisateur = DB::select('SELECT * FROM utilisateur WHERE id =?',[$id]);
 
 $utilisateurs = $utilisateur[0];
 $groupes =Groupe::all();
