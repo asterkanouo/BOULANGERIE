@@ -515,7 +515,7 @@ select.form-control.form-custom {
 }
 .dropdown:not(.custom-dropdown-icon) .dropdown-menu a.dropdown-item {
     border-radius: 5px;
-    font-size: 12px;
+    font-size: 22px;
     font-weight: 700;
     color: #888ea8;
     padding: 11px 8px;

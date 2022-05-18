@@ -13,6 +13,38 @@ class UtilisateurController extends Controller
         $utilisateurs = Utilisateur::orderBy("nom","asc")->paginate(10);
         return view('sous_menus/utilisateur',compact('utilisateurs') );
     }
+
+
+
+    public function index1 (){
+        $utilisateurs = Utilisateur::orderBy("nom","asc")->paginate(10);
+        return view('impression/utilisateurImp',compact('utilisateurs') );
+    }
+
+    
+
+   
+
+    public function search(Request $request){
+        // Get the search value from the request
+        $search = $request->input('search');
+    
+        // Search in the title and body columns from the posts table
+        $utilisateurs = Utilisateur::query()
+            ->where('compte', 'LIKE', "%{$search}%")
+            ->orWhere('nom', 'LIKE', "%{$search}%")
+            //->get();
+            ->paginate(1);
+    
+        // Return the search view with the resluts compacted
+       
+       return view('sous_menus/utilisateur', compact('utilisateurs'));
+    }
+
+    public function recherche(){
+        return view('recherche/recherche');
+    }
+
     public function create (){
         $groupes =Groupe::all();
         return view('sous_menus/utilisateurCreate',compact('groupes') );

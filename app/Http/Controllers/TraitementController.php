@@ -27,15 +27,20 @@ class TraitementController extends Controller
         ]);
 
         if($resultat)
-        return redirect('/dashbord') ;
+        return view('/dashbord') ;
        
         return back()->withInput()->withErrors([
             'compte'=>'compte ou mot de passe incorrect',
         ]) ;
     }
 
+    public function imprimer(){
+       // return view('impression/test');
+        //    $pdf = PDF::loadView('impression/test');
+        //    return $pdf->stream('impression/test.pdf');
+    }
 
-     
+    
     
 
     public function deconnexion(){

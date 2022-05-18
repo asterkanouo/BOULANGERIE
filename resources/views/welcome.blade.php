@@ -18,6 +18,7 @@
     <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/structure.css" rel="stylesheet" type="text/css" class="structure" />
     <link href="/css/aristo.css" rel="stylesheet" type="text/css"  />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
     <!-- END GLOBAL MANDATORY STYLES -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
@@ -1118,9 +1119,22 @@
     <script src="plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="assets/js/app.js"></script>
 
+     <script src="/js/animals.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
     <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">></script>
-    <script type = "text/javascript" src="js/jquery-ui.min.js">></script>
-    <script type = "text/javascript" src="js/main.js">></script>
+    <script type = "text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type = "text/javascript" src="js/main.js"></script>
+    <script type=  "text/javascript" src="js/jquery.printPage.js"> </script>
+   
+    
+    
+  <script type="text/javascript">
+  $(document).ready(function(){
+      $('.btnprn').printPage();
+    });
+  </script>
 
     <script>
         $(document).ready(function() {
@@ -1133,6 +1147,8 @@
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <script src="plugins/apex/apexcharts.min.js"></script>
     <script src="assets/js/dashboard/dash_1.js"></script>
+
+    
 
     </body>
     

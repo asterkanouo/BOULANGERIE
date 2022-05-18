@@ -21,6 +21,10 @@ Route::get('/', function () {
 })->name('login');
 
 
+
+
+Route::get('/impression',[TraitementController::class,"imprimer"])->name("impression");
+
 Route::group([
     'middleware'=>'App\Http\Middleware\Auth',
 ], function(){
@@ -31,6 +35,13 @@ Route::group([
     Route::get('/dashbord', function () {
         return view('dashbord');
     })->name('dashbord');
+
+});
+Route::get('search', [UtilisateurController::class,"search"])->name('search');
+Route::get('/recherche/recherche',[UtilisateurController::class,"rechercher"])->name("recherche");
+Route::get('/recherche/recherche',[UtilisateurController::class,"recherche"])->name("recherche");
+
+Route::get('/impression/utilisateurImp',[UtilisateurController::class,"index1"])->name("utilisateurImp");
 
 Route::get('/caisse',[CaisseController::class,"index"])->name("caisse");
 
@@ -92,7 +103,7 @@ Route::post('/marchandise.create',[MarchandiseController::class,"store"])->name(
 Route::get('/marchandise.delete/{id_mar}',[MarchandiseController::class,"delete"])->name("marchandise.delete");
 
 Route::get('/parametre',[ParametreController::class,"index"])->name("parametre");
-});
+
 Route::get('/deconnexion',[TraitementController::class,"deconnexion"])->name("deconnexion");
 Route::get('/facture_fournisseur',[FournisseurController::class,"facture"])->name("facture_fournisseur");
 Route::get('/detail_fournisseur',[FournisseurController::class,"detail"])->name("detail_fournisseur");
