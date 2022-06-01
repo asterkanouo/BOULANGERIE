@@ -19,18 +19,22 @@ class TraitementController extends Controller
 
         request()->validate([
             'password'=>['required', 'min:8'],
+            'compte'=>['required'],
         ]);
-
         $resultat = auth()->attempt([
             'compte'=>request('compte'),
             'password'=>request('password'),
         ]);
 
-        if($resultat)
-        return view('/dashbord') ;
-       
-        return back()->withInput()->withErrors([
-            'compte'=>'compte ou mot de passe incorrect',
+        if($resultat){
+            $role=auth()->user()->is_admin;
+            if($role)
+            return view('/welcome');
+            else 
+            return view('/vendeur') ;
+        }
+            return back()->withInput()->withErrors([
+            'password'=>'identifiants incorrects ou utilisateur inexistant'
         ]) ;
     }
 

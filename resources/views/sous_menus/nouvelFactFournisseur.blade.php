@@ -1,11 +1,11 @@
 @extends('welcome')
 @section('content')
 <div class="container">
-<div class="card">
+<div class="card container-fluid">
 <div class=" card-header d-flex justify-content-center pb-2 mb-4 ">
 <h5>Nouvelle facture fournisseur</h5>
 </div>
-     <div class="card-body">
+     <div class="card-body ">
     <div class="row">
         <div class=" mr-2 col-8 card bg-body rounded shadow-sm mb-4">
                 <div class="card-body"> 
@@ -49,8 +49,8 @@
              
             <div class="col">
             <label  class="">Numero de la facture:</label>
-                <input type="text" class=" mr-3" value="">    
-            <button type="submit" class="mb-3 btn btn-dark">Calculer</button>
+                <input type="text" class="col-sm-6 mr-3" value="">    
+            <button type="submit" class=" mt-4 mb-3 btn btn-dark">Calculer</button>
              </div> 
            
 
@@ -82,17 +82,19 @@
 </table>
     </div>
     </div>
-    <div class="col">
+    <form class="col mt-3">
                 <button type="submit" class=" mr-3 btn btn-success">valider</button>
                 <label  class="">Total:</label>
-                <input type="text" class="mr-3" value="0">
+                <input type="text" class="mr-2 col-sm-2" value="0">
                 <label  class="">Reduction:</label>
-                <input type="text" class="mr-3" value="0">
+                <input type="text" class="mr-2 col-sm-2 " value="0">
                 <label  class="">Net:</label>
-                <input type="text" class="mr-3" value="0">
-                <button type="submit" class="mr-4 btn btn-primary">Enregistrer</button>
+                <input type="text" class="mr-2 col-sm-2" value="0">
+                <div class="mt-3 d-flex justify-content-center" >
+                <button type="submit" class="mr-2 btn btn-primary">Enregistrer</button>
                 <button href="{{route('welcome')}}" class="mr-4 btn btn-danger">Quitter</button>
-            </div>
+                </div>
+            </form>
     </div>
     </div>
     </div>

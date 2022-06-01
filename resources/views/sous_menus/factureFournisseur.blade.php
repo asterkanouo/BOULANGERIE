@@ -42,17 +42,19 @@
                 <div class=" col-sm-4">
                 <input type="text" id="datepicker2" readonly="readonly" class="form-control" value="" name="date_debut">     
                  </div>
+                 <button id="tableau" type="button" class="mt-3 col-sm-12 btn btn-success" >Afficher</button>
             </div> 
             </form>
             </div>
              </div>
-            <div class="">
-            <button type="submit" class="btn btn-success">Afficher</button>
-            </div> 
+            
             </div> 
             </div>
 
         <div class=" col-12 card bg-body rounded shadow-sm ">
+        <div class="d-flex justify-content-end ">
+                <button type="submit" class="mt-3 mr-4 btn btn-primary">Imprimer la facture</button>
+                </div>
             <div class="card-body"> 
             <table class="table table-bordered table-hover">
   <thead class=" bg-light">
@@ -76,14 +78,13 @@
     </tr>
   </tbody>
 </table>
+                    <div class="mt-3 d-flex justify-content-end" >
+                    <a href="{{route('welcome')}}" class="btn btn-danger">Retour</a>
+                    </div>
     </div>
     </div>
             
-                <div class="d-flex justify-content-center ">
-                <button type="submit" class=" mr-4 btn btn-light">Imprimer le code à barres</button>
-                <button type="submit" class="mr-4 btn btn-primary">Imprimer la facture</button>
-                <button href="{{route('welcome')}}" class="btn btn-danger">Retour</button>
-                </div>
+                
             
     </div>
     </div>

@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class auth
+class Other
 {
     /**
      * Handle an incoming request.
@@ -17,19 +17,13 @@ class auth
     public function handle(Request $request, Closure $next)
     {
         if (auth()->guest()){
-            $info ='vous devez être connectés';
-           return back()->withErrors([
-               'email'=>'vous devez être connectés',
-           ]) ;
-        }
-        else if(auth()->check()){
-                if(auth()->user()->is_admin)
-                return response()->view('welcome');
-                  if(auth()->user()->is_vendeur)
-                return response()->view('dashbord'); 
-            
-        }
+       return redirect('connexion')->withErrors([
+        'compte'=>'vous devez être connectés',
+    ]) ;
     
+    
+    // dump('other middlleware');
+    // die;
         return $next($request);
     }
 }

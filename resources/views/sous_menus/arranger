@@ -21,3 +21,11 @@ if(auth()->check()){
   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
   
   
+
+  
+                    <script language="javascript">
+                        function f(){
+                            alert("Vous avez bien cliqué sur le bouton!");
+                        }
+                    </script>
+                    <input type="button" value="Cliquez ici" onClick="f()" />

@@ -3,7 +3,7 @@
 <div class="container">
 <div class="card">
 <div class=" card-header d-flex justify-content-center pb-2 mb-4 ">
-<h5>Détail du fournisseur</h5>
+<h5>Détail du stock d'articles</h5>
 </div>
      <div class="card-body">
     <div class="row">
@@ -21,7 +21,22 @@
                 @endforeach
                 </select>
                  </div>
-            </div>    
+            </div>  
+
+<!-- enchainemant des boutons radios -->
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="produit" value="option1">
+                <label class="form-check-label" for="inlineRadio1">produit</label>
+                </div>
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="matiere_p" value="option2">
+                <label class="form-check-label" for="inlineRadio2">matiere première</label>
+                </div>
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="marchandise" value="option3">
+                <label class="form-check-label" for="inlineRadio3">marchandise</label>
+                </div>
+    <!-- fins des boutons radios -->
             <div class=" form-group row">
                 <label for="util" class="col-sm-4 form-label" >Fournisseur: </label>
                 <div class=" col-sm-12">
@@ -32,7 +47,15 @@
                 @endforeach
                 </select>
                  </div>
-            </div>    
+            </div>   
+
+
+
+
+
+
+
+
             <div class=" form-group row">
                 <label for="util" class="col-sm-2 form-label" >Date de début: </label>
                 <div class=" col-sm-4">

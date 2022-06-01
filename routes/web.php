@@ -17,17 +17,11 @@ use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\TraitementController;
 
 Route::get('/', function () {
-    return view('connexion');
+    return view('login');
 })->name('login');
-
-
-
-
 Route::get('/impression',[TraitementController::class,"imprimer"])->name("impression");
 
-Route::group([
-    'middleware'=>'App\Http\Middleware\Auth',
-], function(){
+    Route :: middleware (['admin']) -> group (function () { 
     Route::get('/welcome', function () {
         return view('welcome');
     })->name('welcome');
@@ -36,7 +30,7 @@ Route::group([
         return view('dashbord');
     })->name('dashbord');
 
-});
+
 Route::get('search', [UtilisateurController::class,"search"])->name('search');
 Route::get('/recherche/recherche',[UtilisateurController::class,"rechercher"])->name("recherche");
 Route::get('/recherche/recherche',[UtilisateurController::class,"recherche"])->name("recherche");
@@ -104,11 +98,24 @@ Route::get('/marchandise.delete/{id_mar}',[MarchandiseController::class,"delete"
 
 Route::get('/parametre',[ParametreController::class,"index"])->name("parametre");
 
-Route::get('/deconnexion',[TraitementController::class,"deconnexion"])->name("deconnexion");
+
 Route::get('/facture_fournisseur',[FournisseurController::class,"facture"])->name("facture_fournisseur");
 Route::get('/detail_fournisseur',[FournisseurController::class,"detail"])->name("detail_fournisseur");
 Route::get('/nouvel_fact_four',[FournisseurController::class,"nouvel_fact"])->name("nouvel_fact_four");
 
-
+});
 Route::get('/connexion',[TraitementController::class,"formulaire"])->name("connexion");
 Route::post('/connexion',[TraitementController::class,"traitement"])->name("connexion");
+Route::get('/deconnexion',[TraitementController::class,"deconnexion"])->name("deconnexion");
+
+
+
+
+ Route :: middleware (['other']) -> group (function () { 
+   
+//     Route::get('/dashbord', function () {
+//         return view('dashbord');
+//     })->name('dashbord');
+
+//Route::get('/utilisateur',[UtilisateurController::class,"index"])->name("utilisateur");
+});

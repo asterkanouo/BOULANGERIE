@@ -34,7 +34,7 @@
         @endforeach
     </ul>
     @endif
-      <table class="table table-bordered table-hover">
+      <table id="tableaux" class="table table-bordered table-hover">
   <thead class="  bg-success">
     <tr>
       <th scope="col">N°</th>
@@ -46,6 +46,7 @@
     </tr>
   </thead>
   <tbody>
+  
   @foreach($utilisateurs as $utilisateur)
     <tr>
       <th scope="row">{{$loop->index+1}}</th>
@@ -64,15 +65,15 @@
     </tr>
 
     @endforeach
-  </tbody>
-  
-</table>
+  </tbody>       
+</table>           
 <div class = "d-flex justify-content-end mb-2">
   {{($utilisateurs->links())}}
 </div>
 </div>
+                       
 
-    
 
 
+  
   @endsection

@@ -205,7 +205,7 @@
                             <div class="media mx-auto">
                                 <img src="assets/img/profile-50.jpg" class="img-fluid mr-2" alt="avatar">
                                 <div class="media-body">
-                                    <h5>Aster Kanouo</h5>
+                                    <h5>{{Auth::user()->compte}}</h5>
                                     <p>Project Leader</p>
                                 </div>
                             </div>
