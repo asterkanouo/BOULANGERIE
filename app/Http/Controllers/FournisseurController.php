@@ -33,4 +33,9 @@ class FournisseurController extends Controller
         return view('sous_menus/nouvelFactFournisseur',compact('fournisseurs','depots') );
     }
    
+    public function en_cours (){
+        $fournisseurs = Fournisseur::all();
+        $depots =Depot::all();
+        return view('sous_menus/enCoursFournisseur',compact('fournisseurs','depots') );
+    }
 }

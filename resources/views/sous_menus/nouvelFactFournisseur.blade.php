@@ -90,9 +90,9 @@
                 <input type="text" class="mr-2 col-sm-2 " value="0">
                 <label  class="">Net:</label>
                 <input type="text" class="mr-2 col-sm-2" value="0">
-                <div class="mt-3 d-flex justify-content-center" >
+                <div class="mt-3 d-flex justify-content-end" >
                 <button type="submit" class="mr-2 btn btn-primary">Enregistrer</button>
-                <button href="{{route('welcome')}}" class="mr-4 btn btn-danger">Quitter</button>
+                <a href="{{route('welcome')}}" class="mr-4 btn btn-danger">Quitter</a>
                 </div>
             </form>
     </div>

@@ -17,7 +17,7 @@ use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\TraitementController;
 
 Route::get('/', function () {
-    return view('login');
+    return view('connexion');
 })->name('login');
 Route::get('/impression',[TraitementController::class,"imprimer"])->name("impression");
 
@@ -102,6 +102,7 @@ Route::get('/parametre',[ParametreController::class,"index"])->name("parametre")
 Route::get('/facture_fournisseur',[FournisseurController::class,"facture"])->name("facture_fournisseur");
 Route::get('/detail_fournisseur',[FournisseurController::class,"detail"])->name("detail_fournisseur");
 Route::get('/nouvel_fact_four',[FournisseurController::class,"nouvel_fact"])->name("nouvel_fact_four");
+Route::get('/fact_en_cours_four',[FournisseurController::class,"en_cours"])->name("fact_en_cours_four");
 
 });
 Route::get('/connexion',[TraitementController::class,"formulaire"])->name("connexion");

@@ -541,7 +541,7 @@
                                     <a href="{{('nouvel_fact_four')}}">Nouvelle Facture </a>
                                 </li>
                                 <li>
-                                    <a href="table_dt_basic-dark.html">Facture en cours</a>
+                                    <a href="{{route('fact_en_cours_four')}} ">Facture en cours</a>
                                 </li>
                             </ul>
                         </li>

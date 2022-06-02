@@ -10,7 +10,8 @@
 </head>
 
 <body>
-    <h1 class="text-primary" style="margin-left: 500px;margin-top: 11px;">Boulangerie Sigma</h1><img class="rounded-circle" src="assets/img/logob.jpg" style="width: 320px;margin-left: 500px;margin-bottom: 3px;">
+    <h1 class="text-primary" style="margin-left: 500px;margin-top: 11px;">Boulangerie Sigma</h1>
+    <img class="rounded-circle" src="assets/img/logob.jpg" style="width: 320px;margin-left: 500px;margin-bottom: 3px;">
     <div class="border rounded border-primary" style="width: 402px;margin-left: 462px;margin-bottom: 10px;">
         <form style="margin-left: 5px;width: 390px;margin-bottom: -1px;" method="post" action="{{route('connexion')}}">
         @csrf
