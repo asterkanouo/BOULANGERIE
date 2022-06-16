@@ -11,7 +11,7 @@ class TraitementController extends Controller
 
 
     public function formulaire(){
-        return view('connexion');
+        return view('login');
     }
 
 

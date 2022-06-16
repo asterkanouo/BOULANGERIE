@@ -10,34 +10,37 @@
 </head>
 
 <body>
-    <h1 class="text-primary" style="margin-left: 500px;margin-top: 11px;">Boulangerie Sigma</h1>
-    <img class="rounded-circle" src="assets/img/logob.jpg" style="width: 320px;margin-left: 500px;margin-bottom: 3px;">
-    <div class="border rounded border-primary" style="width: 402px;margin-left: 462px;margin-bottom: 10px;">
-        <form style="margin-left: 5px;width: 390px;margin-bottom: -1px;" method="post" action="{{route('connexion')}}">
+<div style="margin-left: 150px;margin-top: 50px;">
+    <h1 class="text-primary" style="font-size: 48px;margin-left: 510px;margin-top: 11px;">Boulangerie Sigma</h1>
+    <img class="rounded-circle" src="assets/img/logob.jpg" style="width: 350px;margin-left: 550px;margin-bottom: 3px;">
+    <div class="border rounded border-primary" style="width: 515px;margin-left: 462px;margin-bottom: 10px;">
+        <form style="height: 320px;margin-left: 5px;width: 500px;margin-bottom: -1px;" method="post" action="{{route('connexion')}}">
         @csrf
                 
-            <div class="border rounded input-group mb-3" style="font-size: 18px;margin-top: 3px;">
+            <div class="border rounded input-group mb-3" style="font-size: 18px;margin-top: 3px;height: 70px;">
                 <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user" style="font-size: 24px;"></i></span></div>
-                <input class="shadow-none form-control" name="compte" value="{{old('compte')}}" type="text" style="font-size: 22px;width: 36px;margin-top: 0px;" placeholder="Votre compte">
+                <input class="shadow-none form-control" name="compte" value="{{old('compte')}}" type="text" style="height: 70px;font-size: 22px;width: 36px;margin-top: 0px;" placeholder="Votre compte">
                
-            </div>
+            </div >
              @if($errors->has('compte'))
                     <p class="text-danger" >{{$errors->first('compte')}}</p>
                     @endif
             <div
                 class="border rounded input-group mb-3" style="font-size: 18px;">
                 <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-lock" style="font-size: 26px;"></i></span></div>
-                <input class="border rounded-0 shadow-none form-control" name="password" type="password" style="height: 47px;margin-left: 0px;width: 332px;" placeholder="Mot de passe" >
-                @if($errors->has('password'))
+                <input class="border rounded-0 shadow-none form-control" name="password" type="password" style="font-size: 22px;height: 70px;margin-left: 0px;width: 332px;" placeholder="Mot de passe" >
+              
+            </div>
+            @if($errors->has('password'))
                     <p class="text-danger">{{$errors->first('password')}}</p>
                     @endif
-            </div>
-                <button class="btn btn-primary active" type="submit" style="width: 389px;height: 46px;margin-bottom: 4px;background-color: rgb(25,170,83);">Se Connecter</button>
+                <button class="btn btn-primary active" type="submit" style="font-size: 22px;width: 500px;height: 50px;margin-bottom: 15px;background-color: rgb(25,170,83);">Se Connecter</button>
+                <a href="#" style="margin-left: 150px;font-size: 19px;margin-top: 5px;">Mot de passe oublié?</a>
         </form>
     </div>
     
-        <a href="#" style="margin-left: 580px;font-size: 19px;margin-top: 5px;">Mot de passe oublié?</a>
-   
+       
+        </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>

@@ -18,7 +18,7 @@ class Admin
     {
          
         if (auth()->guest())
-        return redirect('connexion')->withErrors([
+        return redirect('login')->withErrors([
        'compte'=>'vous devez être connectés',
         ]) ;
 

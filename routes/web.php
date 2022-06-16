@@ -15,9 +15,10 @@ use App\Http\Controllers\MarchandiseController;
 use App\Http\Controllers\ParametreController;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\TraitementController;
+use App\Http\Controllers\StockController;
 
 Route::get('/', function () {
-    return view('connexion');
+    return view('login');
 })->name('login');
 Route::get('/impression',[TraitementController::class,"imprimer"])->name("impression");
 
@@ -109,6 +110,9 @@ Route::get('/connexion',[TraitementController::class,"formulaire"])->name("conne
 Route::post('/connexion',[TraitementController::class,"traitement"])->name("connexion");
 Route::get('/deconnexion',[TraitementController::class,"deconnexion"])->name("deconnexion");
 
+Route::get('/detail_stock',[StockController::class,"afficher_stock"])->name("detail_stock");
+Route::get('/transfert_stock',[StockController::class,"transferer_stock"])->name("transfert_stocks");
+Route::get('/mouvement_stocks',[StockController::class,"mouvement_stock"])->name("mouvement_stocks");
 
 
 
