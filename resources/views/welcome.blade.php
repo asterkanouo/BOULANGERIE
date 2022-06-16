@@ -614,7 +614,7 @@
                             <a href="{{route('transfert_stocks')}} "><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Transfert de stocks </a>
                         </li>
                         <li>
-                            <a href="form_validation.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span>Liste des mouvements de stocks </a>
+                            <a href="{{route('liste_mvt_stocks')}} "><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span>Liste des mouvements de stocks </a>
                         </li>
                        
                         <li class="sub-submenu">
@@ -1111,7 +1111,7 @@
     <div id="content" class="main-content">
             <div class="layout-px-spacing">
 
-                <div class="justify-content-center col-12">
+            <div class="justify-content-center col-12">
                         @yield('content')
                 </div>
 

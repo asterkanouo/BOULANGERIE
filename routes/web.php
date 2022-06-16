@@ -112,6 +112,7 @@ Route::get('/deconnexion',[TraitementController::class,"deconnexion"])->name("de
 
 Route::get('/detail_stock',[StockController::class,"afficher_stock"])->name("detail_stock");
 Route::get('/transfert_stock',[StockController::class,"transferer_stock"])->name("transfert_stocks");
+Route::get('/liste_mvt_stocks',[StockController::class,"lister_mvt_stocks"])->name("liste_mvt_stocks");
 Route::get('/mouvement_stocks',[StockController::class,"mouvement_stock"])->name("mouvement_stocks");
 
 

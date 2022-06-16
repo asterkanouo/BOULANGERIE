@@ -48,9 +48,17 @@
 </div>
 </div>
 <div style="margin-top: 11px;">
+
 <label class="form-label">Date du jour:&nbsp;</label>
 <input type="date"  style="margin-left: 7px;">
-<label class="form-label" style="margin-left: 54px;">Num Approv:</label>
+<!-- <div class="bg-dark form-group row "   style="height: 50px;width: 350px;margin-left:0px;" >
+                <label for="util" class="col-sm-8 form-label" style=" font-size: 18px;margin-top: 13px" >Date du jour: </label>
+                <div class=" col-sm-4">
+                <input style="height: 30px; width: 200px;font-size: 20px; margin-left:-100px;margin-top: 10px;" type="text" id="datepicker" readonly="readonly" class="form-control" value="{{date('d - m - y')}} " name="date_du_jour">
+                </div>
+                </div> -->
+
+<label class="form-label" style="margin-left: 10px;">Num Approv:</label>
 <input type="text" style="margin-left: 7px;font-weight: bold;width: 117px;" value="MS001913">
 <label class="form-label" style="margin-left: 50px;">Libellé:</label>
 <input type="text" style="margin-left: 15px;width: 210px;">

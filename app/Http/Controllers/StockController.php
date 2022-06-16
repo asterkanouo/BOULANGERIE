@@ -21,7 +21,12 @@ class StockController extends Controller
     public function mouvement_stock(){
         $depots = Depot::all();
         return view('sous_menus/mouvement_stocks',compact('depots'));
+        
+    }
 
+    public function lister_mvt_stocks(){
+        $depots = Depot::all();
+        return view('sous_menus/liste_mvt_stocks',compact('depots'));
     }
 
     public function transferer_stock(){
