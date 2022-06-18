@@ -36,4 +36,20 @@ class StockController extends Controller
         $marchandises = Marchandise::all();
         return view('sous_menus/transfert_stocks',compact('depots','matiere_ps','marchandises', 'produits') );
     }
+
+    public function stat_transferer_stock(){
+        $depots = Depot::all();
+        $produits = Produit::all();
+        $matiere_ps = Matiere_p::all();
+        $marchandises = Marchandise::all();
+        return view('sous_menus/stat_transfert_stocks',compact('depots','matiere_ps','marchandises', 'produits') );
+    }
+
+    public function stat_mvt_stock(){
+        $depots = Depot::all();
+        $produits = Produit::all();
+        $matiere_ps = Matiere_p::all();
+        $marchandises = Marchandise::all();
+        return view('sous_menus/stat_mvt_stocks',compact('depots','matiere_ps','marchandises', 'produits') );
+    }
 }

@@ -47,7 +47,7 @@
     <!--  BEGIN NAVBAR  -->
    
     <div class="header-container fixed-top">
-        <header class="header navbar navbar-expand-sm  bg-light">
+        <header class="header navbar navbar-expand-sm  bg-primary">
             <ul class="navbar-item flex-row">
                 <li class="nav-item theme-logo">
                     <a href="index.html">
@@ -68,7 +68,7 @@
                     </form>
                 </li>
             </ul>
-            <ul class="navbar-item flex-row navbar-dropdown">
+            <ul class="navbar-item flex-row navbar-dropdown ">
                 <li class="nav-item dropdown language-dropdown more-dropdown">
                     <div class="dropdown  custom-dropdown-icon">
                         <a class="dropdown-toggle btn" href="#" role="button" id="customDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/img/ca.png" class="flag-width" alt="flag"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
@@ -249,7 +249,7 @@
     <!--  END NAVBAR  -->
 
     <!--  BEGIN MAIN CONTAINER  -->
-    <div class="main-container " id="container" >
+    <div class="main-container  " id="container" >
 
         <div class="overlay"></div>
         <div class="search-overlay "></div>
@@ -257,8 +257,8 @@
         <!--  BEGIN SIDEBAR  -->
         <div class="sidebar-wrapper sidebar-theme ">
        
-            <nav id="compactSidebar">
-                <ul class="menu-categories">
+            <nav  id="compactSidebar">
+                <ul class="menu-categories bg-dark ">
                     <!-- <li class="menu active">
                         <a href="#dashboard" data-active="true" class="menu-toggle">
                             <div class="base-menu">
@@ -621,10 +621,10 @@
                             <a role="menu" class="collapsed" data-toggle="collapse" data-target="#datatables" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span>Statistiques</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg> </a>
                             <ul id="datatables" class="collapse" data-parent="#compact_submenuSidebar">
                                 <li>
-                                    <a href="table_dt_basic.html">Transfert de stocks </a>
+                                    <a href="{{route('stat_transfert_stocks')}}">Transfert de stocks </a>
                                 </li>
                                 <li>
-                                    <a href="table_dt_basic-dark.html">Mouvements de stocks</a>
+                                    <a href="{{route('stat_mvt_stocks')}}">Mouvements de stocks</a>
                                 </li>
                             </ul>
 
