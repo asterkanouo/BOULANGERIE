@@ -688,7 +688,7 @@
                     <a role="menu" class="collapsed" data-toggle="collapse" data-target="#datatables" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span>Saisir une fiche de production</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg> </a>
                     <ul id="datatables" class="collapse" data-parent="#compact_submenuSidebar">
                         <li>
-                            <a href="table_dt_basic.html">Nouvelle fiche </a>
+                            <a href="{{route('nouvel_fiche_prod')}} ">Nouvelle fiche </a>
                         </li>
                         <li>
                             <a href="table_dt_basic-dark.html">En cours</a>

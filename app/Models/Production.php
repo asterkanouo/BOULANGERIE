@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Stock extends Model
+class Production extends Model
 {
     use HasFactory;
     use HasFactory;
@@ -22,6 +22,10 @@ class Stock extends Model
         }
     public function matiere_p(){
         return $this->belongsTo(Matiere_p::class);
+            
+        }
+    public function equipe(){
+        return $this->belongsTo(Equipe::class);
             
         }
 }

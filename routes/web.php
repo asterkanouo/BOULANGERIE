@@ -16,6 +16,7 @@ use App\Http\Controllers\ParametreController;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\TraitementController;
 use App\Http\Controllers\StockController;
+use App\Http\Controllers\ProductionController;
 
 Route::get('/', function () {
     return view('login');
@@ -119,6 +120,8 @@ Route::get('/mouvement_stocks',[StockController::class,"mouvement_stock"])->name
 Route::get('/etat_inventaire',[StockController::class,"afficher_inventaire"])->name("etat_inventaire");
 Route::get('/saisie_inventaire',[StockController::class,"saisir_inventaire"])->name("saisie_inventaire");
 Route::get('/archive_inventaire',[StockController::class,"archiver_inventaire"])->name("archive_inventaire");
+
+Route::get('/nouvel_fiche_prod',[ProductionController::class,"creer_production"])->name("nouvel_fiche_prod");
 
 
 
