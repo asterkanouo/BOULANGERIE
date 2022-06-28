@@ -627,20 +627,21 @@
                                     <a href="{{route('stat_mvt_stocks')}}">Mouvements de stocks</a>
                                 </li>
                             </ul>
-
+                        </li>
                             <li class="sub-submenu">
                             <a role="menu" class="collapsed" data-toggle="collapse" data-target="#datatables" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span>Inventaire des stocks</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg> </a>
                             <ul id="datatables" class="collapse" data-parent="#compact_submenuSidebar">
                                 <li>
-                                    <a href="table_dt_basic.html">Etat inventaire </a>
+                                    <a href="{{route('etat_inventaire')}} ">Etat inventaire </a>
                                 </li>
                                 <li>
-                                    <a href="table_dt_basic-dark.html">Saisie inventaire</a>
+                                    <a href="{{route('saisie_inventaire')}} ">Saisie inventaire</a>
                                 </li>
                                 <li>
-                                    <a href="table_dt_basic-dark.html">Archives des inventaires</a>
+                                    <a href="{{route('archive_inventaire')}}">Archives des inventaires</a>
                                 </li>
                             </ul>
+                        </li>
                         <!-- <li>
                             <a href="form_select2.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Select2 </a>
                         </li>

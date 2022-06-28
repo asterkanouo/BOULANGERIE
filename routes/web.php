@@ -116,6 +116,9 @@ Route::get('/stat_transfert_stock',[StockController::class,"stat_transferer_stoc
 Route::get('/stat_mvt_stock',[StockController::class,"stat_mvt_stock"])->name("stat_mvt_stocks");
 Route::get('/liste_mvt_stocks',[StockController::class,"lister_mvt_stocks"])->name("liste_mvt_stocks");
 Route::get('/mouvement_stocks',[StockController::class,"mouvement_stock"])->name("mouvement_stocks");
+Route::get('/etat_inventaire',[StockController::class,"afficher_inventaire"])->name("etat_inventaire");
+Route::get('/saisie_inventaire',[StockController::class,"saisir_inventaire"])->name("saisie_inventaire");
+Route::get('/archive_inventaire',[StockController::class,"archiver_inventaire"])->name("archive_inventaire");
 
 
 

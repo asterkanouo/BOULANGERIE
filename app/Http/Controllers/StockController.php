@@ -52,4 +52,22 @@ class StockController extends Controller
         $marchandises = Marchandise::all();
         return view('sous_menus/stat_mvt_stocks',compact('depots','matiere_ps','marchandises', 'produits') );
     }
+    public function afficher_inventaire(){
+        $depots = Depot::all();
+        $produits = Produit::all();
+        $matiere_ps = Matiere_p::all();
+        $marchandises = Marchandise::all();
+        return view('sous_menus/etat_inventaire',compact('depots','matiere_ps','marchandises', 'produits') );
+    }
+    public function saisir_inventaire(){
+        $depots = Depot::all();
+        $produits = Produit::all();
+        $matiere_ps = Matiere_p::all();
+        $marchandises = Marchandise::all();
+        return view('sous_menus/saisie_inventaire',compact('depots','matiere_ps','marchandises', 'produits') );
+    }
+    public function archiver_inventaire(){
+        $depots = Depot::all();
+        return view('sous_menus/archive_inventaire',compact('depots'));
+    }
 }
