@@ -19,7 +19,11 @@ class ProductionController extends Controller
         $equipes = Equipe::all();
         return view('sous_menus/nouvel_fiche_prod',compact('depots','matiere_ps','equipes', 'produits') );
     }
-
+    public function lister_production (){
+        $depots = Depot::all();
+        $equipes = Equipe::all();
+        return view('sous_menus/fiche_production_encours',compact('depots','equipes') );
+    }
     public function mouvement_stock(){
         $depots = Depot::all();
         return view('sous_menus/mouvement_stocks',compact('depots'));

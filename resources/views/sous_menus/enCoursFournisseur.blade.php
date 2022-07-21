@@ -1,36 +1,36 @@
 @extends('welcome')
 @section('content')
-<div class="container">
-<div class="card container-fluid">
+<div style="width: 1500px;margin-left: 20px;">
+<div class=" border rounded-0 shadow" style="width: 1500px;margin-top: 0px;">
 <div class=" card-header d-flex justify-content-center pb-2 mb-4 ">
 <h5>Liste des factures fournisseur</h5>
 </div>
      <div class="card-body ">
-    <div class="row">
-        <div class=" mr-2 col-8 card bg-body rounded shadow-sm mb-4" style="margin-left: 190px;">
-                <div class="card-body" > 
-                <form style="height: 30px; margin-top: 4px;margin-left: 18px;width: 348px;" method="post" action="{{route('fact_en_cours_four')}}">
+        <div class="mr-2 col-8 card bg-body rounded shadow-sm mb-4" style="margin-left: 0px;width: 500px;height:100px">
+               
+                <form class=""  style="   height: 30px; margin-top: 14px;margin-left: 18px;width: 300px;" method="post" action="{{route('fact_en_cours_four')}}">
                  @csrf
                 <div class=" form-group row"  >
-                <label for="util" class="col-sm-4 form-label" >dépôt: </label>
+                <label for="util" class="col-sm-4 form-label" style="margin-left: 0px" >dépôt: </label>
                 <div class=" col-sm-12">
-                <select class="form-control" style="margin-left: 68px;margin-top: -40px;">
+                <select class="form-control" style="margin-left: 100px;margin-top: -40px;">
                 <option value=""></option>
                 @foreach($depots as $depot)
                     <option value="{{$depot->code_matiere}}">{{$depot->libelle}}</option>
                 @endforeach
                 </select>
+                <button class="btn btn-secondary" type="button" style="height: 40px; margin-top: 10px;margin-left:100px;">Afficher</button>
                  </div>
-                 <button class="btn btn-secondary" type="button" style="height: 40px; margin-top: -45px;margin-left: 450px;">Afficher</button>
+                 
             </div>  
             </form>
             </div>
-            </div>
+          
            
-
-        <div class=" col-12 card bg-body rounded shadow-sm ">
-            <div class="card-body"> 
-            <table class="table table-bordered ">
+           
+        <div class="col-12  bg-body rounded shadow-sm " style="width: 1500px;margin-left: 0px;">
+           
+            <table class="table table-bordered " >
   <thead class=" bg-light">
     <tr>
       <th scope="col">....</th>
@@ -65,6 +65,6 @@
 
     </div>
     </div>
-    </div>
+   
 
  @endsection

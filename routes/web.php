@@ -122,6 +122,7 @@ Route::get('/saisie_inventaire',[StockController::class,"saisir_inventaire"])->n
 Route::get('/archive_inventaire',[StockController::class,"archiver_inventaire"])->name("archive_inventaire");
 
 Route::get('/nouvel_fiche_prod',[ProductionController::class,"creer_production"])->name("nouvel_fiche_prod");
+Route::get('/fiche_production_encours',[ProductionController::class,"lister_production"])->name("fiche_production_encours");
 
 
 

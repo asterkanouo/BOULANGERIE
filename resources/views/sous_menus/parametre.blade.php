@@ -1,12 +1,13 @@
 @extends('welcome')
 @section('content')
-<div class="container">
-<div class="card">
-    <div class="card-header">
-        <h4>Gestion des paramètres</h4>
+<div style="width: 1500px;margin-left: 20px;">
+<div class=" border rounded-0 shadow" style="width: 1500px;margin-top: 0px;">
+<div class="card  " >
+    <div class="card-header"  >
+        <h4 style="margin-left:550px;">Gestion des paramètres</h4>
         </div>
     <div class="card-body">
-    <div class="row">
+    <div class="row" style="margin-left:20px;">
         <div class=" mr-2 col-6 card bg-body rounded shadow-sm ">
             <div class=" card-header d-flex bg-primary justify-content-center pb-2 mb-4 ">
             <h5>Parametre de l'entreprise</h5>
@@ -92,7 +93,7 @@
 
 
 
-    <div class="row">
+    <div class="row" style="margin-left:20px;">
         <div class="mr-2 mt-4 col-6 card bg-body rounded shadow-sm ">
             <div class=" card-header d-flex bg-primary justify-content-center pb-2 mb-4 ">
             <h5>Paramètre</h5>

@@ -1,7 +1,7 @@
 @extends('welcome')
 @section('content')
-<div class="container">
-<div class="card container-fluid">
+<div style="width: 1500px;margin-left: 20px;">
+<div class=" border rounded-0 shadow" style="width: 1500px;margin-top: 0px;">
 <div class=" card-header d-flex justify-content-center pb-2 mb-4 ">
 <h5>Nouvelle facture fournisseur</h5>
 </div>

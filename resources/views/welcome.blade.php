@@ -691,7 +691,7 @@
                             <a href="{{route('nouvel_fiche_prod')}} ">Nouvelle fiche </a>
                         </li>
                         <li>
-                            <a href="table_dt_basic-dark.html">En cours</a>
+                            <a href="{{route('fiche_production_encours')}} ">En cours</a>
                         </li>
                     </ul>
                     </li>

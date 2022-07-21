@@ -1,6 +1,6 @@
 @extends('welcome')
 @section('content')
-<body style="width: 1500px;margin-left: 20px;">
+<div style="width: 1500px;margin-left: 20px;">
 <div class=" border rounded-0 shadow" style="width: 1500px;margin-top: 0px;">
 <h3 class="text-center bg-light" style="height: 50px;background: var(--bs-gray-100);margin-bottom: 26px;">Gestion des fiches de production</h3>
 <div class=" row " style="width: 1500px;margin-left: 0px;">
@@ -8,22 +8,28 @@
 <div class="border rounded" style="width: 740px;margin-left: 0px;">
 <div style="height: 33px;margin-top: 16px;">
 <label class="form-label" style="margin-left: 2px;margin-top: 0px;">Dépôt:</label>
-<select style="width: 530px;margin-left: 30px;margin-bottom: 10px;font-size: 30px;">
-<optgroup label="This is a group">
-<option value="12" selected="">
-</option></optgroup>
+<div class=" col-sm-12">
+<select class="form-control" style="margin-left: 90px;margin-top: -40px;width:580px;">
+<option value=""></option>
+@foreach($depots as $depot)
+    <option value="{{$depot->code_matiere}}">{{$depot->libelle}}</option>
+@endforeach
 </select>
-</div>
+ </div>
+ </div>
 <div>
 <div class=" row" style="width: 700px;margin-top: 10px">
 <div class="col" style="width: 350px;margin-top: 16px;">
 <label class="form-label" style="margin-left: 2px;">Equipe:</label>
-<select style="width: 188px;margin-left: 25px;margin-top: -10px;font-size: 30px;">
-<optgroup label="This is a group"><option value="12" selected=""></option></optgroup>
+<select class="rounded" style="width: 188px;margin-left: 25px;margin-top: -10px;font-size: 16px;height:40px; ">
+@foreach($equipes as $equipe)
+<option value=""></option>
+    <option value="{{$equipe->code_equipe}}">{{$equipe->libelle}}</option>
+@endforeach
 </select>
 </div>
 <div class="col" style="width: 290px;">
-<label for="util" class="col-sm-8 form-label" style="margin-left: -30px;" >Date de début: </label>
+<label for="util" class="col-sm-8 form-label" style="margin-left: -30px;margin-top: 15px;" >Date de début: </label>
 <div class=" col-sm-4">
 <input type="text" id="datepicker" style="font-size:16px;margin-bottom: 15px;margin-left: 120px;margin-top: -35px;width: 200px;" readonly="readonly" class="form-control" value="{{date('Y - M - d')}} " name="date_debut">
 </div>
@@ -33,10 +39,8 @@
 </div>
 </div>
 <div class="col" style="width: 542px;">
-<div style="width: 545px;margin-top: 8px;">
-<label class="form-label">Num de production:</label>
-<input type="text" style="margin-left: 14px;">
-</div>
+<label class="form-label ">Num de production:</label>
+<input class="rounded" type="text" style="margin-left: 14px;">
 </div>
 </div>
 <div>
