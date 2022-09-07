@@ -1,7 +1,7 @@
 @extends('welcome')
 @section('content')
-<div class="col-8 card bg-body rounded shadow-sm ">
-    <div class=" card-header d-flex bg-primary justify-content-center pb-2 mb-4 ">
+<div class=" border rounded-0 shadow" style="width: 1380px;margin-top: 0px;margin-left: 120px;">
+    <div class=" card-header d-flex  justify-content-center pb-2 mb-4 ">
     <h2>Ajout d'une nouvelle marchandise</h2>
     </div>
      <div class="card-body"> 

@@ -1,7 +1,7 @@
 @extends('welcome')
 @section('content')
-<div  class="container-fluid col-4 my-3 p-3 bg-body rounded shadow-sm ">
-    <h3 class="d-flex bg-primary justify-content-center pb-2 mb-4 ">Ajout d'un groupe</h3>
+<div class=" border rounded-0 shadow" style="width: 1380px;margin-top: 0px;margin-left: 120px;">
+    <h3 class="d-flex justify-content-center pb-2 mb-4 ">Ajout d'un groupe</h3>
       <div class=" mt-4">
 
       @if(session()->has("success"))

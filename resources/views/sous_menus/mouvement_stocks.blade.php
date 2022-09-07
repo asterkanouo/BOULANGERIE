@@ -1,8 +1,10 @@
 @extends('welcome')
 @section('content')
-<div class="border rounded-0" style="width: 1040px;height: 600px;margin-left: 200px;margin-top: 20px;">
-<h4 class="text-center" style="background: #efe1e1;height: 43px;">Gestion des stocks</h4>
-<div class="border rounded-0" style="width: 430px;margin-top: 1px;margin-left: 7px;">
+<div class=" border rounded-1 shadow" style="width: 1400px;margin-top: 0px;margin-left: 120px;">
+<div class=" card-header d-flex justify-content-center pb-2 mb-4 ">
+<h5>Liste des factures fournisseur</h5>
+</div>
+<div class="card  rounded-1" style="width: 430px;margin-top: 1px;margin-left: 7px;">
 <div class="mb-3"  >
 <label class="form-label" style="width: 87.6px;font-size: 20px;">Dépôt:&nbsp;</label>
 <select style="width: 300px;height: 40px; font-size: 20px;margin-top: 10px;"></select>
@@ -15,10 +17,15 @@
 <option value="">Marchandise</option>
 </select>
 <div>
+
+
+
+
+
 </div
 ></div>
 </div>
-<div class="border rounded-0" style="margin-top: 7px;height: 300px;margin-left: 7px;margin-right: 7px;">
+<div class="card rounded-1" style="margin-top: 7px;margin-left: 7px;margin-right: 7px;">
 <div class="table-responsive">
 <table class="table table-hover table-bordered"  >
         <thead>
@@ -49,8 +56,7 @@
 </div>
 <div style="margin-top: 11px;">
 
-<label class="form-label">Date du jour:&nbsp;</label>
-<input type="date"  style="margin-left: 7px;">
+
 <!-- <div class="bg-dark form-group row "   style="height: 50px;width: 350px;margin-left:0px;" >
                 <label for="util" class="col-sm-8 form-label" style=" font-size: 18px;margin-top: 13px" >Date du jour: </label>
                 <div class=" col-sm-4">
@@ -58,20 +64,30 @@
                 </div>
                 </div> -->
 
-<label class="form-label" style="margin-left: 10px;">Num Approv:</label>
-<input type="text" style="margin-left: 7px;font-weight: bold;width: 117px;" value="MS001913">
-<label class="form-label" style="margin-left: 50px;">Libellé:</label>
-<input type="text" style="margin-left: 15px;width: 210px;">
+ <div class=" form-group row"  >
+<label for="util" class=" form-label" style="margin-left:20px;" >Date du jour: </label>
+<div class=" col-sm-4">
+<input style="margin-left: 0px;font-weight: bold;width: 250px;" type="text" id="datepicker2" readonly="readonly" value="{{date('d-F-y')}}" name="date_debut">     
 </div>
-<div class="btn-group" role="group" style="margin-left: 740px;">
-<button class="btn btn-primary border rounded" type="button" style="width: 140.5px;font-size: 20px;background: rgb(6,164,89);">Enregistrer</button>
-<button class="btn btn-danger border rounded" type="button" style="margin-left: 11px;width: 140.5px;font-size: 20px;background: rgb(253,42,13);">Quitter</button>
+</div>
+
+<div class=" form-group row" style="margin-top: -60px;margin-left:500px"  >
+<label class="form-label" style="margin-left: 10px;">Num Approv:</label>
+<div class=" col-sm-4">
+<input type="text"  value="MS001913">
+</div>
+</div>
+<div class=" form-group row" style="margin-top: -60px;margin-left:900px"  >
+<label class="form-label" style="margin-left: 50px;">Libellé:</label>
+<div class=" col-sm-4">
+<input type="text">
+</div>
+</div>
+<div class="d-flex justify-content-center mt-4 mb-1" s >
+<button class="btn btn-primary border rounded" type="button" style="background: rgb(6,164,89);">Enregistrer</button>
+<button class="ml-4 btn btn-danger border rounded" type="button" style="background: rgb(253,42,13);">Quitter</button>
 </div>
 </div>
 <div>
-</div>
-
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/script.min.js"></script>
 
  @endsection

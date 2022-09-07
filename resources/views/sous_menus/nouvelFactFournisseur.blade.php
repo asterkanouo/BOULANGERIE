@@ -1,6 +1,6 @@
 @extends('welcome')
 @section('content')
-<div style="width: 1500px;margin-left: 20px;">
+<div class=" border rounded-0 shadow" style="width: 1380px;margin-top: 0px;margin-left: 120px;">
 <div class=" border rounded-0 shadow" style="width: 1500px;margin-top: 0px;">
 <div class=" card-header d-flex justify-content-center pb-2 mb-4 ">
 <h5>Nouvelle facture fournisseur</h5>
@@ -49,14 +49,17 @@
              
             <div class="col">
             <label  class="">Numero de la facture:</label>
-                <input type="text" class="col-sm-6 mr-3" value="">    
-            <button type="submit" class=" mt-4 mb-3 btn btn-dark">Calculer</button>
+                <input type="text" class="col-sm-6 mr-3" value="">  
+                <div class="col" >
+                <button type="submit" class=" mt-1 btn btn-dark" style="margin-left: -15px; width:230px;">Calculer</button>
              </div> 
+             </div> 
+             
            
 
-        <div class=" col-12 card bg-body rounded shadow-sm ">
+        <div class=" col-12 card bg-body rounded shadow-sm " >
             <div class="card-body"> 
-            <table class="table table-bordered ">
+            <table class="table table-bordered " style="margin-left: -30px; width:1365px;">
   <thead class=" bg-light">
     <tr>
       <th scope="col">....</th>
@@ -83,14 +86,15 @@
     </div>
     </div>
     <form class="col mt-3">
-                <button type="submit" class=" mr-3 btn btn-success">valider</button>
+                
                 <label  class="">Total:</label>
                 <input type="text" class="mr-2 col-sm-2" value="0">
                 <label  class="">Reduction:</label>
                 <input type="text" class="mr-2 col-sm-2 " value="0">
                 <label  class="">Net:</label>
                 <input type="text" class="mr-2 col-sm-2" value="0">
-                <div class="mt-3 d-flex justify-content-end" >
+                <div class="mt-3 d-flex justify-content-center" >
+                <button type="submit" class=" mr-3 btn btn-success">valider</button>
                 <button type="submit" class="mr-2 btn btn-primary">Enregistrer</button>
                 <a href="{{route('welcome')}}" class="mr-4 btn btn-danger">Quitter</a>
                 </div>

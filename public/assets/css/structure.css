@@ -789,7 +789,7 @@ code { color: #e7515a; }
     margin-left: 0;
 }
 .sidebar-wrapper #compactSidebar {
-    width: 200px;
+    width: 300px;
     position: fixed;
     top: 80px;
     left: 0;
@@ -840,10 +840,11 @@ code { color: #e7515a; }
     align-items: center;
     font-size: 13px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 400px;
     color: #515365;
     transition: color .3s;
     transition: background .3s;
+
 }
 .sidebar-wrapper #compactSidebar .menu-categories a.menu-toggle > div.base-menu {
     text-align: center;
@@ -862,7 +863,7 @@ code { color: #e7515a; }
     stroke-width: 0.7px;
 }
 .sidebar-wrapper #compactSidebar .menu-categories a.menu-toggle .base-menu span {
-    font-size: 18px;
+    font-size: 22px;
     margin-top: 8px;
     display: inline-block;
     color: #fafafa;
@@ -887,20 +888,20 @@ code { color: #e7515a; }
     font-size: 15px;
 }
 .sidebar-wrapper #compact_submenuSidebar {
-    left: -255px;
+    left: -180px;
     position: fixed;
     height: 100%;
     height: calc(100vh - 79px);
     top: 80px;
     background: rgb(240, 234, 250);
-    width: 375px;
-    padding: 20px;
+    width: 475px;
+    padding: 2px;
     transition: .3s ease all;
     z-index: 1030;
     border-right: 1px solid #e0e6ed;
 }
 .sidebar-wrapper #compact_submenuSidebar.show {
-    left: 190px;
+    left: 295px;
 }
 .sidebar-wrapper #compact_submenuSidebar .submenu {
     display: none;
@@ -959,7 +960,7 @@ code { color: #e7515a; }
 .sidebar-wrapper #compact_submenuSidebar .submenu ul.submenu-list li a .icon svg:not(.feather-chevron-right) {
     margin-right: 0;
     width: 12px;
-    height: 12px;
+    height: 20px;
     align-self: center;
 }
 .sidebar-wrapper #compact_submenuSidebar .submenu ul.submenu-list li a:hover {
@@ -999,7 +1000,7 @@ code { color: #e7515a; }
 }
 .sidebar-wrapper #compact_submenuSidebar .submenu ul.submenu-list li.sub-submenu ul li a {
     position: relative;
-    padding: 6px 30px;
+    padding: 6px 65px;
     background: transparent;
     border-radius: 0;
     font-size: 20px;

@@ -1,6 +1,7 @@
 @extends('welcome')
 @section('content')
-<div class="container">
+<div class=" border rounded-0 shadow" style="width: 1400px;margin-top: 0px;margin-left: 120px;">
+<div class=" border rounded-0 shadow" style="width: 1400px;margin-top: 0px;">
 <div class="card">
 <div class=" card-header d-flex justify-content-center pb-2 mb-4 ">
 <h5>Détail du fournisseur</h5>
@@ -50,11 +51,8 @@
              </div>
             <div class="mt-3 row">
         <div class=" col-12 card bg-body rounded shadow-sm ">
-        <div class="mt-3 d-flex justify-content-end" >
-                <button type="submit" class="btn btn-primary">Imprimer</button>
-                </div>
             <div class="card-body"> 
-            <table id="tableau" class="table table-bordered table-hover">
+            <table id="tableau" class="table table-bordered table-hover" style="width:1360px;margin-left:-20px;">
                 <thead class=" bg-light">
                     <tr>
                     <th scope="col">Référence</th>
@@ -77,6 +75,7 @@
                 </tbody>
                 </table>
                     <div class="mt-3 d-flex justify-content-end" >
+                    <button type="submit" class="mr-3 btn btn-primary">Imprimer</button>
                     <a href="{{route('welcome')}}" class="btn btn-danger">Retour</a>
                     </div> 
     </div>

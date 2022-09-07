@@ -1,7 +1,7 @@
 @extends('welcome')
 @section('content')
-<div style="width: 1500px;margin-left: 20px;">
-<div class=" border rounded-0 shadow" style="width: 1500px;margin-top: 0px;">
+<div class=" border rounded-0 shadow" style="width: 1380px;margin-top: 0px;margin-left: 120px;">
+
 <div class="card  " >
     <div class="card-header"  >
         <h4 style="margin-left:550px;">Gestion des paramètres</h4>
@@ -160,7 +160,6 @@
   <button type="submit" class="btn btn-success mr-4">Enregistrer</button>
   <a  href="{{route('welcome')}}" class="btn btn-danger">Retour</a>
   </div>
-</div>
 </div>
 
  @endsection

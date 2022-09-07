@@ -1,6 +1,6 @@
 @extends('welcome')
 @section('content')
-<div class="container">
+<div class=" border rounded-0 shadow" style="width: 1380px;margin-top: 0px;margin-left: 120px;">
 <div class="card">
 <div class=" card-header d-flex justify-content-center pb-2 mb-4 ">
 <h5>Impression des factures fournisseur</h5>
@@ -51,12 +51,9 @@
             </div> 
             </div>
 
-        <div class=" col-12 card bg-body rounded shadow-sm ">
-        <div class="d-flex justify-content-end ">
-                <button type="submit" class="mt-3 mr-4 btn btn-primary">Imprimer la facture</button>
-                </div>
+        <div class=" col-12 card bg-body rounded shadow-sm " style="width:1370px;margin-left:0px;">
             <div class="card-body"> 
-            <table class="table table-bordered table-hover">
+            <table class="table table-bordered table-hover" style="width:1350px;margin-left:-30px;">
   <thead class=" bg-light">
     <tr>
       <th scope="col">Num facture</th>
@@ -79,6 +76,7 @@
   </tbody>
 </table>
                     <div class="mt-3 d-flex justify-content-end" >
+                    <button type="submit" class=" mr-4 btn btn-primary">Imprimer la facture</button>
                     <a href="{{route('welcome')}}" class="btn btn-danger">Retour</a>
                     </div>
     </div>
@@ -89,5 +87,4 @@
     </div>
     </div>
     </div>
-
  @endsection

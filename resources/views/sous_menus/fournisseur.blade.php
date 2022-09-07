@@ -1,7 +1,7 @@
 @extends('welcome')
 @section('content')
 
-<div class="container-fluid bg-body rounded shadow-sm ">
+<div class=" border rounded-0 shadow" style="width: 1380px;margin-top: 0px;margin-left: 120px;">
 <nav class="navbar bg-dark ">
 <ul class="nav nav-pills nav-fill">
   <li class="nav-item">

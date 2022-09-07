@@ -1,7 +1,7 @@
 @extends('welcome')
 @section('content')
-<div class=" col-6 card bg-body rounded shadow-sm ">
-    <div class=" card-header d-flex bg-primary justify-content-center pb-2 mb-4 ">
+<div class=" border rounded-0 shadow" style="width: 1380px;margin-top: 0px;margin-left: 120px;">
+    <div class=" card-header d-flex justify-content-center pb-2 mb-4 ">
     <h1>Ajout d'un nouveau client</h1>
     </div>
      <div class="card-body"> 
@@ -29,7 +29,7 @@
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Prenom</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" name="prenom">
+    <input type="text" class="form-control" id="exampleInputPassword1" name="prenom">
   </div>
   <div class="mb-3">
   <label for="disabledSelect" class="form-label">Catégorie</label>

@@ -401,7 +401,7 @@ select.form-control.form-custom {
 .btn {
     padding: 0.4375rem 1.25rem;
     text-shadow: none;
-    font-size: 14px;
+    font-size: 18px;
     color: #3b3f5c;
     font-weight: normal;
     white-space: normal;
@@ -1386,13 +1386,13 @@ input[readonly], select[readonly], textarea[readonly] {
    
     vertical-align: middle;
     color: #515365;
-    font-size: 14px;
+    font-size: 22px;
     letter-spacing: 1px; }
 .table > thead > tr > th {
     
     color: #1b55e2;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 1px;
     text-transform: uppercase; }
 

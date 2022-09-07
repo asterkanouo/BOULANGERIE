@@ -1,6 +1,6 @@
 @extends('welcome')
 @section('content')
-<div class="container-fluid bg-body rounded shadow-sm">
+<div class=" border rounded-0 shadow" style="width: 1380px;margin-top: 0px;margin-left: 120px;">
 <nav class="navbar bg-dark ">
 <ul class="nav">
   <li class="nav-item">
@@ -31,7 +31,7 @@
       <th scope="col">N°</th>
       <th scope="col">Libelle</th>
       <th scope="col">Superviseur</th>
-      <th scope="col">Nb membres</th>
+      <th scope="col">Nbre_membres</th>
       <th scope="col">Dépôt</th>
       <th scope="col">Action</th>
     </tr>
