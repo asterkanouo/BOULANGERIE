@@ -1,115 +1,140 @@
 @extends('welcome')
 @section('content')
-<div style="width: 1500px;margin-left: 20px;">
-<div class=" border rounded-0 shadow" style="width: 1500px;margin-top: 0px;">
-<h3 class="text-center bg-light" style="height: 50px;background: var(--bs-gray-100);margin-bottom: 26px;">Gestion des fiches de production</h3>
-<div class=" row " style="width: 1500px;margin-left: 0px;">
-<div class="col" style="margin-left: 0px;">
-<div class="border rounded" style="width: 740px;margin-left: 0px;">
-<div style="height: 33px;margin-top: 16px;">
-<label class="form-label" style="margin-left: 2px;margin-top: 0px;">Dépôt:</label>
-<div class=" col-sm-12">
-<select class="form-control" style="margin-left: 90px;margin-top: -40px;width:580px;">
-<option value=""></option>
-@foreach($depots as $depot)
-    <option value="{{$depot->code_matiere}}">{{$depot->libelle}}</option>
-@endforeach
-</select>
- </div>
- </div>
-<div>
-<div class=" row" style="width: 700px;margin-top: 10px">
-<div class="col" style="width: 350px;margin-top: 16px;">
-<label class="form-label" style="margin-left: 2px;">Equipe:</label>
-<select class="rounded" style="width: 188px;margin-left: 25px;margin-top: -10px;font-size: 16px;height:40px; ">
-@foreach($equipes as $equipe)
-<option value=""></option>
-    <option value="{{$equipe->code_equipe}}">{{$equipe->libelle}}</option>
-@endforeach
-</select>
-</div>
-<div class="col" style="width: 290px;">
-<label for="util" class="col-sm-8 form-label" style="margin-left: -30px;margin-top: 15px;" >Date de début: </label>
-<div class=" col-sm-4">
-<input type="text" id="datepicker" style="font-size:16px;margin-bottom: 15px;margin-left: 120px;margin-top: -35px;width: 200px;" readonly="readonly" class="form-control" value="{{date('Y - M - d')}} " name="date_debut">
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col" style="width: 542px;">
-<label class="form-label ">Num de production:</label>
-<input class="rounded" type="text" style="margin-left: 14px;">
-</div>
-</div>
-<div>
-<label class="form-label" style="font-weight: bold;font-size: 18px;margin-top: 10px;width: 201px;margin-left: 5px;">Production du jour</label>
-<button class="btn btn-primary" type="button" style="width: 42.5px;height: 22px;color: var(--bs-red);background: var(--bs-pink);margin-left: 500px;"></button>
-<label class="form-label" style="font-weight: bold;font-size: 18px;margin-top: 10px;width: 301px;margin-left: 10px;">Consommation du jour</label>
-<button class="btn btn-primary" type="button" style="background: var(--bs-gray-400);color: rgb(23,18,18);margin-left: 235px;margin-top: -15px;">Calculer</button>
-<button class="btn btn-primary" type="button" style="width: 42.5px;height: 22px;color: var(--bs-red);background: var(--bs-pink);margin-left: 19px;margin-right: 0px;"></button>
-</div>
-<div class="container" style="margin-top: 0px;margin-bottom: 11px;">
-<div class="row">
-<div class="col-md-6">
-<div class="table-responsive" style="margin-left: -190px;width: 750px">
-<table class="table table-hover table-bordered">
-<thead style="font-size:14px;">
-<tr>
-<th></th>
-<th>Réference</th><th>Désignation</th>
-<th>Stock réel</th>
-<th>Quantité</th>
-<th>Prix contrôle</th><th>Montant</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><button class="btn btn-primary" type="button" style="width: 10px;height: 22px;color: var(--bs-red);background: var(--bs-gray-800);margin-left: -4px;"></button></td>
-<td></td>
-<td></td>
-<td>&nbsp;</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class=" col-md-6" >
-<div style="margin-left: 0px;width: 720px;" class=" table-responsive" >
-<table class="table table-hover table-bordered"  style="width: 700px">
-<thead>
-<tr>
-<th style="width: 20px;height: 58px;"></th>
-<th>Réference</th>
-<th style="margin-left: 0px;">Désignation</th>
-<th>Stock réel</th>
-<th>Quantité</th>
-<th>Prix d'achat</th>
-<th>Montant</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="width: 20px;"><button class="btn btn-primary" type="button" style="width: 10px;height: 22px;color: var(--bs-red);background: var(--bs-gray-800);margin-left: -3px;"></button></td>
-<td></td>
-<td style="margin-left: 0px;">
-</td><td>&nbsp;</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
+<div class=" border rounded-1 shadow" style="width: 1400px;margin-top: 0px;margin-left: 120px;">
+    <div class="card ">
+        <div class=" card-header d-flex justify-content-center pb-2 ">
+            <h5>Gestion des fiches de production</h5>
+        </div>
+        <div class="card-body">
+            <div class=" row " style="">
+                <div class="col " style="margin-left: -10px;width:700px;">
+                    <div class="card" style="">
+                        <div class="card-body">
+                            <div class="bg-body card" style="width:400px;margin-top: -13px;margin-left:-20px;">
+                                <div class="form-group row"style="margin-top:3px;margin-left:0px;"> 
+                                    <label class="form-label" style="">Dépôt:</label>
+                                    <div class="col-sm-8 " style="margin-left:68px;">
+                                    <select class="form-control" >
+                                    <option value=""></option>
+                                    @foreach($depots as $depot)
+                                        <option value="{{$depot->code_matiere}}">{{$depot->libelle}}</option>
+                                    @endforeach
+                                    </select>
+                                    </div>
+                                </div>
+                                <div class=" form-group row"style="margin-top:3px;margin-left:0px;">     
+                                    <label class="form-label" style="">Equipe:</label>
+                                    <div class="col-sm-8"style="margin-left:60px; ">
+                                    <select class="form-control" >
+                                    @foreach($equipes as $equipe)
+                                    <option value=""></option>
+                                        <option value="{{$equipe->code_equipe}}">{{$equipe->libelle}}</option>
+                                    @endforeach
+                                    </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row"style="margin-top:3px;margin-left:0px;"> 
+                                    <label for="util" class="form-label" style="margin-right:3px;" >Date du jour: </label>
+                                    <div class="col-sm-8">
+                                    <input type="text" id="datepicker" style="font-size:20px;" readonly="readonly" class="form-control" value="{{date('d-F-Y')}} " name="date_debut">
+                                    </div>
+                                </div>                              
+                            </div>
+
+                            <div class="col-sm-12 form-group row"style="margin-top:5px;"> 
+                                    <label for="util" class="form-label" style="margin-left:-15px;" >Production du jour: </label>
+                                    <div class="d-flex justify-content-end" style="margin-left:600px;margin-top:-25px;">
+                                    <button class="btn btn-danger" type="submit"></button>
+                                    </div>
+                            </div>  
+                                <div class="row">
+                                        <div class="table-responsive" style="">
+                                            <table class="table table-hover table-bordered">
+                                            <thead style="font-size:14px;">
+                                            <tr>
+                                            <th></th>
+                                            <th>Réf</th>
+                                            <th>Désignation</th>
+                                            <th>Stock réel</th>
+                                            <th>Qté</th>
+                                            <th>Prix contrôle</th>
+                                            <th>Montant</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                            <td><button class="btn btn-warning" type="button" style="width: 10px;height: 22px;color: var(--bs-red);background: var(--bs-gray-800);margin-left: -4px;"></button></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>&nbsp;</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col" style="margin-left: -20px;width:700px;">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row" style="margin-bottom:155px;">
+                                <label class="form-label ">Num de production:</label>
+                                <input class="rounded" type="text" style="margin-left: 14px;">
+                            </div>
+                            <div class="col-sm-12 form-group row"style="margin-top:5px;"> 
+                                    <label for="util" class="form-label" style="margin-left:-15px;" >Consommation du jour: </label>
+                                    <div class="d-flex justify-content-end" style="margin-left:460px;margin-top:-45px;">
+                                    <button class="btn btn-dark mr-3" type="submit">Calculer</button>
+                                    <button class="btn btn-danger" type="submit" style="height:27px;margin-top:18px;"></button>
+                                    </div>
+                            </div>  
+                            <div class="row">
+                            <div class="table-responsive" style="">
+                                <table class="table table-hover table-bordered">
+                                <thead style="font-size:14px;">
+                                    <tr>
+                                    <th style=""></th>
+                                    <th>Réf</th>
+                                    <th style="margin-left: 0px;">Désignation</th>
+                                    <th>Stock réel</th>
+                                    <th>Qté</th>
+                                    <th>Prix d'achat</th>
+                                    <th>Montant</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                    <td style=""><button class="btn btn-warning" type="button" style="width: 10px;height: 22px;color: var(--bs-red);background: var(--bs-gray-800);margin-left: -3px;"></button></td>
+                                    <td></td>
+                                    <td style="margin-left: 0px;">
+                                    </td><td>&nbsp;</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 d-flex justify-content-center" >
+                    <button class="mr-3  btn btn-success" type="button" >Détail</button>
+                    <button class="mr-3 btn btn-primary" type="button" style="background-color: #19aa53;">Enregistrer</button>
+                    <a class="btn btn-danger mr-3 " href="{{route('welcome')}}" type="button" style="background-color: rgb(255,15,0);">Fermer</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script></body></html>
 
  @endsection

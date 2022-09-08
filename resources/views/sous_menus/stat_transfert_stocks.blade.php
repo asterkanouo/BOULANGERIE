@@ -108,7 +108,8 @@
                 <input class="form-control" readonly style="margin-top: 0px;font-size: 20px;width: 250px;margin-left: -150px;height: 40px;">
                  </div>
     <button class="btn btn-primary " type="button" style="margin-left:30px;background-color: #19aa53;">Imprimer</button>
-    <a class="btn btn-danger" href="{{route('welcome')}}" type="button" style="margin-left:20px;background-color: rgb(255,15,0);">Fermer</a></div>
+    <a class="btn btn-danger" href="{{route('welcome')}}" type="button" style="margin-left:20px;background-color: rgb(255,15,0);">Fermer</a>
+    </div>
     </div>
     </div>
 
