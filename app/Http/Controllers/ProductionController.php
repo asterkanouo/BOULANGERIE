@@ -24,6 +24,17 @@ class ProductionController extends Controller
         $equipes = Equipe::all();
         return view('sous_menus/fiche_production_encours',compact('depots','equipes') );
     }
+
+    public function afficher_production (){
+        $depots = Depot::all();
+        return view('sous_menus/liste_production',compact('depots') );
+    }
+
+    public function controler_qte_production (){
+        $equipes = Equipe::all();
+        return view('sous_menus/controle_qte_prod',compact('equipes') );
+    }
+
     public function mouvement_stock(){
         $depots = Depot::all();
         return view('sous_menus/mouvement_stocks',compact('depots'));
@@ -75,5 +86,11 @@ class ProductionController extends Controller
     public function archiver_inventaire(){
         $depots = Depot::all();
         return view('sous_menus/archive_inventaire',compact('depots'));
+    }
+
+    public function palmares_produit(){
+        $depots = Depot::all();
+        $produits = Produit::all();
+        return view('sous_menus/palmares_prod_produit',compact('depots','produits'));
     }
 }

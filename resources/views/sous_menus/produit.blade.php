@@ -28,13 +28,11 @@
       <table class="table table-bordered table-hover">
   <thead class=" bg-success">
     <tr>
-      <th scope="col">N°</th>
       <th scope="col">Réf</th>
+      <th scope="col">Date</th>
       <th scope="col">Désignation</th>
-      <th scope="col">Prix détail</th>
-      <th scope="col">Prix gros</th>
+      <th scope="col">Quantité</th>
       <th scope="col">Prix Contrôle</th>
-      <th scope="col">Unité stockage</th>
       <th scope="col">Action</th>
     </tr>
   </thead>

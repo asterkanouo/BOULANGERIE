@@ -1,90 +1,29 @@
-<div class="border rounded" style="width: 740px;margin-left: 0px;">
-                
 
-
-<div class="card-body" >
-
-///////////////////////////////////////////////
-
- <label class="form-label" style="margin-left: 2px;margin-top: 0px;">Equipe:</label>
-                                    <div class=" col-sm-8">
-                                    <select class="form-control" style="">
-                                    <option value=""></option>
-                                    @foreach($depots as $depot)
-                                        <option value="{{$depot->code_matiere}}">{{$depot->libelle}}</option>
-                                    @endforeach
-                                    </select>
-                                    </div>
-                                    
-                                    <!-- <label class="form-label" style="margin-left: 2px;margin-top: 0px;">Equipe:</label>
-                                    <div class=" col-sm-8">
-                                    <select class="rounded" style=" ">
-                                    @foreach($equipes as $equipe)
-                                    <option value=""></option>
-                                        <option value="{{$equipe->code_equipe}}">{{$equipe->libelle}}</option>
-                                    @endforeach
-                                    </select>
-                                    </div> -->
-                                    <!-- <div class="" style="width: 290px;">
-                                    <label for="util" class="col-sm-8 form-label" style="" >Date de début: </label>
-                                    <div class=" col-sm-4">
-                                    <input type="text" id="datepicker" style=" " readonly="readonly" class="form-control" value="{{date('Y - M - d')}} " name="date_debut">
-                                    </div> -->
-
-        §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§
-
-
-              
-                
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<div>
-<label class="form-label" style="font-weight: bold;font-size: 18px;margin-top: 10px;width: 201px;margin-left: 5px;">Production du jour</label>
-<button class="btn btn-primary" type="button" style="width: 42.5px;height: 22px;color: var(--bs-red);background: var(--bs-pink);margin-left: 500px;"></button>
-<label class="form-label" style="font-weight: bold;font-size: 18px;margin-top: 10px;width: 301px;margin-left: 10px;">Consommation du jour</label>
-<button class="btn btn-primary" type="button" style="background: var(--bs-gray-400);color: rgb(23,18,18);margin-left: 235px;margin-top: -15px;">Calculer</button>
-<button class="btn btn-primary" type="button" style="width: 42.5px;height: 22px;color: var(--bs-red);background: var(--bs-pink);margin-left: 19px;margin-right: 0px;"></button>
-</div>
-
-
-<div class="container" style="margin-top: 0px;margin-bottom: 11px;">
-<div class="row">
-<div class="col-md-6">
-<div class="table-responsive" style="margin-left: -190px;width: 750px">
-<table class="table table-hover table-bordered">
-<thead style="font-size:14px;">
-<tr>
-<th></th>
-<th>Réference</th><th>Désignation</th>
-<th>Stock réel</th>
-<th>Quantité</th>
-<th>Prix contrôle</th><th>Montant</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><button class="btn btn-primary" type="button" style="width: 10px;height: 22px;color: var(--bs-red);background: var(--bs-gray-800);margin-left: -4px;"></button></td>
-<td></td>
-<td></td>
-<td>&nbsp;</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-
-
-
-
-
-</div>
-</div>
-</div>
+            <div class="row">
+                <div class="col">
+                   
+                </div>
+                <div class="col" style="margin-left: -20px;width:700px;">
+                    <div class="card">
+                        <div class="row" style="margin-bottom:155px;">
+                            <label class="form-label ">Num de production:</label>
+                            <input class="rounded" type="text" style="margin-left: 14px;">
+                        </div>
+                        <div class="col-sm-12 form-group row"style="margin-top:5px;"> 
+                                <label for="util" class="form-label" style="margin-left:-15px;" >Consommation du jour: </label>
+                                <div class="d-flex justify-content-end" style="margin-left:460px;margin-top:-45px;">
+                                <button class="btn btn-dark mr-3" type="submit">Calculer</button>
+                                <button class="btn btn-danger" type="submit" style="height:27px;margin-top:18px;"></button>
+                                </div>
+                        </div>  
+                        <div class="row">
+                       
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 d-flex justify-content-center" >
+                    <button class="mr-3  btn btn-success" type="button" >Détail</button>
+                    <button class="mr-3 btn btn-primary" type="button" style="background-color: #19aa53;">Enregistrer</button>
+                    <a class="btn btn-danger mr-3 " href="{{route('welcome')}}" type="button" style="background-color: rgb(255,15,0);">Fermer</a></div>
+                </div>
+            </div>

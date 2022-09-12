@@ -699,14 +699,14 @@
                     <a role="menu" class="collapsed" data-toggle="collapse" data-target="#datatables" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span>Contrôle de production</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg> </a>
                     <ul id="datatables" class="collapse" data-parent="#compact_submenuSidebar">
                         <li>
-                            <a href="table_dt_basic.html">Contrôle quantitatif </a>
+                            <a href="{{route('controle_qte_prod')}}">Contrôle quantitatif </a>
                         </li>
                         <li>
                             <a href="table_dt_basic-dark.html">Contrôle de coût</a>
                         </li>
                     </ul>
                         <li>
-                            <a href="table_basic.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span>Liste des Productions </a>
+                            <a href="{{route('liste_production')}}"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span>Liste des Productions </a>
                         </li>
                         <li class="sub-submenu">
                             <a role="menu" class="collapsed" data-toggle="collapse" data-target="#datatables" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Palmares des productions</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg> </a>
@@ -715,7 +715,7 @@
                                     <a href="table_dt_basic.html"> Production/Equipe </a>
                                 </li>
                                 <li>
-                                    <a href="table_dt_basic-dark.html"> Production/produit</a>
+                                    <a href="{{route('palmares_prod_produit')}}"> Production/produit</a>
                                 </li>
                                 <li>
                                     <a href="table_dt_ordering_sorting.html"> Production/Equipe Produit </a>
