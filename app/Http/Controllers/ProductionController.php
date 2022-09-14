@@ -93,4 +93,25 @@ class ProductionController extends Controller
         $produits = Produit::all();
         return view('sous_menus/palmares_prod_produit',compact('depots','produits'));
     }
+
+    public function palmares_equipe_produit(){
+        $depots = Depot::all();
+        $produits = Produit::all();
+        $equipes = Equipe::all();
+        return view('sous_menus/palmares_equipe_produit',compact('depots','produits','equipes'));
+    }
+    public function cumul_production(){
+        $depots = Depot::all();
+        $equipes = Equipe::all();
+        return view('sous_menus/cumul_production',compact('depots','equipes'));
+    }
+    public function lancer_ordre(){
+        $depots = Depot::all();
+        $equipes = Equipe::all();
+        return view('sous_menus/lancer_ordre_prod',compact('depots','equipes'));
+    }
+    public function executer_ordre(){
+        $depots = Depot::all();
+        return view('sous_menus/executer_ordre_prod',compact('depots'));
+    }
 }

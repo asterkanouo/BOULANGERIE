@@ -5,27 +5,29 @@
 <div class=" card-header d-flex justify-content-center pb-2 mb-4 ">
 <h5>Impression des factures fournisseur</h5>
 </div>
-     <div class="card-body">
-    <div class="row">
-        <div class=" mr-2 col-8 card bg-body rounded shadow-sm ">
-                <div class="card-body"> 
-                <form method="post" action="{{route('parametre')}}">
-                @csrf
-                <div class=" form-group row">
+    
+<div class="card-body ">
+      <div class="row " style="margin-left: 0px;width: 1050px;">
+        <div class=" mr-2  card rounded shadow-sm mb-4" style="margin-left: -10px;width: 460px;">
+                <div class=" card-body" style="height: 200px;width: 548px;" > 
+                <form class="" style="height: 30px; margin-top: 4px;margin-left: 18px;width: 348px;" method="post" action="{{route('fact_en_cours_four')}}">
+                 @csrf
+            <div class=" form-group row" style="margin-bottom: 0px" >
                 <label for="util" class="col-sm-4 form-label" >dépôt: </label>
                 <div class=" col-sm-12">
-                <select class="form-control">
+                <select class="form-control" style="margin-left: 140px;margin-top: -40px;width:270px;">
                 <option value=""></option>
                 @foreach($depots as $depot)
                     <option value="{{$depot->code_matiere}}">{{$depot->libelle}}</option>
                 @endforeach
                 </select>
                  </div>
-            </div>    
-            <div class=" form-group row">
-                <label for="util" class="col-sm-4 form-label" >Fournisseur: </label>
-                <div class=" col-sm-12">
-                <select class="form-control">
+            </div>
+
+            <div class=" form-group row mt-4" >
+                <label for="util" class="col-sm-6 form-label" >Fournisseur: </label>
+                <div class=" col">
+                <select class="form-control" style="margin-left:-50px;width:270px;">
                 <option value=""></option>
                 @foreach($fournisseurs as $fournisseur)
                     <option value="{{$fournisseur->codefournisseur}}">{{$fournisseur->nom}}</option>
@@ -33,17 +35,23 @@
                 </select>
                  </div>
             </div>    
-            <div class=" form-group row">
-                <label for="util" class="col-sm-2 form-label" >Date de début: </label>
+
+
+
+                 <div class="bg-dark form-group row" style="height: 0px;margin-left: -20px">
+                <label for="util" class="col-sm-8 form-label" >Date de début: </label>
                 <div class=" col-sm-4">
-                <input type="text" id="datepicker" readonly="readonly" class="form-control" value="" name="date_debut">
+                <input type="text" id="datepicker" style="font-size: 20px;margin-bottom: 15px;margin-left: -110px;margin-top: 0px;width: 270px;" readonly="readonly" class="form-control" value="{{date('d F Y')}} " name="date_debut">
                 </div>
-                <label for="util" class="col-sm-2 form-label" >Date de fin: </label>
+                <label for="util" class="col-sm-8 form-label" >Date de fin: </label>
                 <div class=" col-sm-4">
-                <input type="text" id="datepicker2" readonly="readonly" class="form-control" value="" name="date_debut">     
+                <input type="text" id="datepicker2" style="font-size: 20px;margin-left: -110px;margin-top: 0px;width: 270px;" readonly="readonly" class="form-control" value="{{date('d F Y')}} " name="date_debut">     
                  </div>
-                 <button id="tableau" type="button" class="mt-3 col-sm-12 btn btn-success" >Afficher</button>
-            </div> 
+                </div> 
+            </div>  
+           
+
+            <button class="btn btn-secondary" type="button" style="width: 440px;height: 50px; margin-top: 80px;margin-bottom: 5px;margin-left: 10px;">Afficher</button>
             </form>
             </div>
              </div>

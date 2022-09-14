@@ -718,10 +718,10 @@
                                     <a href="{{route('palmares_prod_produit')}}"> Production/produit</a>
                                 </li>
                                 <li>
-                                    <a href="table_dt_ordering_sorting.html"> Production/Equipe Produit </a>
+                                    <a href="{{route('palmares_equipe_produit')}}"> Production/Equipe Produit </a>
                                 </li>
                                 <li>
-                                    <a href="table_dt_multi-column_ordering.html"> Cumul de productions </a>
+                                    <a href="{{route('cumul_production')}}"> Cumul de productions </a>
                                 </li>
                          </ul>
                          </li>
@@ -729,10 +729,10 @@
                          <a role="menu" class="collapsed" data-toggle="collapse" data-target="#datatables" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span>Gestion des ordres de production</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg> </a>
                          <ul id="datatables" class="collapse" data-parent="#compact_submenuSidebar">
                              <li>
-                                 <a href="table_dt_basic.html">Lancer l'ordre </a>
+                                 <a href="{{route('lancer_ordre_prod')}} ">Lancer l'ordre </a>
                              </li>
                              <li>
-                                 <a href="table_dt_basic-dark.html">Executer l'ordre</a>
+                                 <a href="{{route('executer_ordre_prod')}} ">Executer l'ordre</a>
                              </li>
                              <li>
                                  <a href="table_dt_ordering_sorting.html">Executer un ordre en cours d'execution</a>

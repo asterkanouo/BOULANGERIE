@@ -3,7 +3,7 @@
 <div class=" border rounded-0 shadow" style="width: 1380px;margin-top: 0px;margin-left: 120px;">
 <div class=" border rounded-0 shadow" style="width: 1380px;margin-top: 0px;">
     <div class=" card-header d-flex justify-content-center pb-2 mb-4 ">
-    <h5>Palmarès de production par produit</h5>
+    <h5>Palmarès de production par produit et par équipe</h5>
     </div>
     <div class="card-body ">
         <form class=""  style=" " method="post" action="{{route('fact_en_cours_four')}}">
@@ -29,6 +29,17 @@
                       <option value=""></option>
                       @foreach($produits as $produit)
                           <option value="{{$produit->code_matiere}}">{{$produit->libelle}}</option>
+                      @endforeach
+                      </select>
+                      </div>
+                    </div>
+                    <div class=" form-group row mt-2"  >
+                      <label for="util" class="col-sm-4 form-label" style="margin-left:0px" >Equipe: </label>
+                      <div class=" col-sm-6">
+                      <select class="form-control" style="margin-left: -50px;width:300px;">
+                      <option value=""></option>
+                      @foreach($equipes as $equipe)
+                          <option value="{{$equipe->code_equipe}}">{{$equipe->libelle}}</option>
                       @endforeach
                       </select>
                       </div>

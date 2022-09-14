@@ -1389,6 +1389,7 @@ input[readonly], select[readonly], textarea[readonly] {
     font-size: 22px;
     letter-spacing: 1px; }
 .table > thead > tr > th {
+
     
     color: #1b55e2;
     font-weight: 700;
@@ -1417,6 +1418,7 @@ input[readonly], select[readonly], textarea[readonly] {
     cursor: pointer;
     margin: 0 auto;
 }
+
 .table > tbody > tr > td svg.t-icon {
     padding: 5px;
     border-radius: 50%;

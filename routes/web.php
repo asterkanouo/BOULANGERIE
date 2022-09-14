@@ -126,6 +126,10 @@ Route::get('/fiche_production_encours',[ProductionController::class,"lister_prod
 Route::get('/controle_qte_prod',[ProductionController::class,"controler_qte_production"])->name("controle_qte_prod");
 Route::get('/liste_production',[ProductionController::class,"afficher_production"])->name("liste_production");
 Route::get('/palmares_prod_prduit',[ProductionController::class,"palmares_produit"])->name("palmares_prod_produit");
+Route::get('/palmares_equipe_prduit',[ProductionController::class,"palmares_equipe_produit"])->name("palmares_equipe_produit");
+Route::get('/cumul_production',[ProductionController::class,"cumul_production"])->name("cumul_production");
+Route::get('/lancer_ordre_prod',[ProductionController::class,"lancer_ordre"])->name("lancer_ordre_prod");
+Route::get('/executer_ordre_prod',[ProductionController::class,"executer_ordre"])->name("executer_ordre_prod");
 
 
 
