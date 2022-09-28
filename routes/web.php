@@ -18,15 +18,15 @@ use App\Http\Controllers\TraitementController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\ProductionController;
 
-Route::get('/', function () {
-    return view('login');
-})->name('login');
+
+Route::get('/',[TraitementController::class,"formulaire"]);
+
 Route::get('/impression',[TraitementController::class,"imprimer"])->name("impression");
 
-    Route :: middleware (['admin']) -> group (function () { 
-    Route::get('/welcome', function () {
-        return view('welcome');
-    })->name('welcome');
+    Route :: middleware (['admin']) -> group (function () 
+    { 
+    Route::get('/welcome',[TraitementController::class,"traitement"])->name("welcome");
+    });
 
     Route::get('/dashbord', function () {
         return view('dashbord');
@@ -106,7 +106,6 @@ Route::get('/detail_fournisseur',[FournisseurController::class,"detail"])->name(
 Route::get('/nouvel_fact_four',[FournisseurController::class,"nouvel_fact"])->name("nouvel_fact_four");
 Route::get('/fact_en_cours_four',[FournisseurController::class,"en_cours"])->name("fact_en_cours_four");
 
-});
 Route::get('/connexion',[TraitementController::class,"formulaire"])->name("connexion");
 Route::post('/connexion',[TraitementController::class,"traitement"])->name("connexion");
 Route::get('/deconnexion',[TraitementController::class,"deconnexion"])->name("deconnexion");
@@ -130,6 +129,12 @@ Route::get('/palmares_equipe_prduit',[ProductionController::class,"palmares_equi
 Route::get('/cumul_production',[ProductionController::class,"cumul_production"])->name("cumul_production");
 Route::get('/lancer_ordre_prod',[ProductionController::class,"lancer_ordre"])->name("lancer_ordre_prod");
 Route::get('/executer_ordre_prod',[ProductionController::class,"executer_ordre"])->name("executer_ordre_prod");
+Route::get('/executer_ordre_enCours',[ProductionController::class,"executer_ordre_enCours"])->name("executer_ordre_enCours");
+Route::get('/consommation_ordre',[ProductionController::class,"consommer_ordre"])->name("consommation_ordre");
+Route::get('/creer_standard_prod',[ProductionController::class,"creer_standard_prod"])->name("creer_standard_prod");
+Route::get('/parametre_standard_prod',[ProductionController::class,"parametrer_standard_prod"])->name("parametre_standard_prod");
+Route::get('/modifier_standard_prod',[ProductionController::class,"modifier_standard_prod"])->name("modifier_standard_prod");
+Route::get('/centre_de_charge',[ProductionController::class,"centre_de_charge"])->name("centre_de_charge");
 
 
 

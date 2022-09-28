@@ -680,7 +680,7 @@
                         </li> -->
                     </ul>
                 </div>
-
+<!-- sous-menu gestion de la production -->
 
                 <div class="submenu" id="tables">
                     <ul class="submenu-list" data-parent-element="#tables">
@@ -705,24 +705,25 @@
                             <a href="table_dt_basic-dark.html">Contrôle de coût</a>
                         </li>
                     </ul>
-                        <li>
-                            <a href="{{route('liste_production')}}"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span>Liste des Productions </a>
-                        </li>
-                        <li class="sub-submenu">
-                            <a role="menu" class="collapsed" data-toggle="collapse" data-target="#datatables" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Palmares des productions</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg> </a>
-                            <ul id="datatables" class="collapse" data-parent="#compact_submenuSidebar">
-                                <li>
-                                    <a href="table_dt_basic.html"> Production/Equipe </a>
-                                </li>
-                                <li>
-                                    <a href="{{route('palmares_prod_produit')}}"> Production/produit</a>
-                                </li>
-                                <li>
-                                    <a href="{{route('palmares_equipe_produit')}}"> Production/Equipe Produit </a>
-                                </li>
-                                <li>
-                                    <a href="{{route('cumul_production')}}"> Cumul de productions </a>
-                                </li>
+                    </li>
+                    <li>
+                        <a href="{{route('liste_production')}}"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span>Liste des Productions </a>
+                    </li>
+                    <li class="sub-submenu">
+                        <a role="menu" class="collapsed" data-toggle="collapse" data-target="#datatables" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Palmares des productions</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg> </a>
+                        <ul id="datatables" class="collapse" data-parent="#compact_submenuSidebar">
+                            <li>
+                                <a href="table_dt_basic.html"> Production/Equipe </a>
+                            </li>
+                            <li>
+                                <a href="{{route('palmares_prod_produit')}}"> Production/produit</a>
+                            </li>
+                            <li>
+                                <a href="{{route('palmares_equipe_produit')}}"> Production/Equipe Produit </a>
+                            </li>
+                            <li>
+                                <a href="{{route('cumul_production')}}"> Cumul de productions </a>
+                            </li>
                          </ul>
                          </li>
                          <li class="sub-submenu">
@@ -735,10 +736,10 @@
                                  <a href="{{route('executer_ordre_prod')}} ">Executer l'ordre</a>
                              </li>
                              <li>
-                                 <a href="table_dt_ordering_sorting.html">Executer un ordre en cours d'execution</a>
+                                 <a href="{{route('executer_ordre_enCours')}}">Executer un ordre en cours d'execution</a>
                              </li>
                              <li>
-                                 <a href="table_dt_multi-column_ordering.html">Consommation des ordres</a>
+                                 <a href="{{route('consommation_ordre')}}">Consommation des ordres</a>
                              </li>
                       </ul>
                       </li>
@@ -746,56 +747,18 @@
                       <a role="menu" class="collapsed" data-toggle="collapse" data-target="#datatables" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span>Parametre de production</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg> </a>
                       <ul id="datatables" class="collapse" data-parent="#compact_submenuSidebar">
                           <li>
-                              <a href="table_dt_basic.html">créér les standards de production</a>
+                              <a href="{{route('creer_standard_prod')}}">créér les standards de production</a>
                           </li>
                           <li>
-                              <a href="table_dt_basic-dark.html">Parametrer un standard de production</a>
+                              <a href="{{route('parametre_standard_prod')}}">Parametrer un standard de production</a>
                           </li>
                           <li>
-                              <a href="table_dt_ordering_sorting.html">Modifier un standard</a>
+                              <a href="{{route('modifier_standard_prod')}}">Modifier un standard</a>
                           </li>
                           <li>
-                              <a href="table_dt_multi-column_ordering.html">Centre des charges</a>
+                              <a href="{{route('centre_de_charge')}} ">Centre des charges</a>
                           </li>
-                   </ul>
-                   </li>
-                        <!-- <li class="sub-submenu">
-                            <a role="menu" class="collapsed" data-toggle="collapse" data-target="#datatables" aria-expanded="false"><div><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg></span> Datatables</div> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg> </a>
-                            <ul id="datatables" class="collapse" data-parent="#compact_submenuSidebar">
-                                <li>
-                                    <a href="table_dt_basic.html"> Basic </a>
-                                </li>
-                                <li>
-                                    <a href="table_dt_basic-dark.html"> Dark </a>
-                                </li>
-                                <li>
-                                    <a href="table_dt_ordering_sorting.html"> Order Sorting </a>
-                                </li>
-                                <li>
-                                    <a href="table_dt_multi-column_ordering.html"> Multi-Column </a>
-                                </li>
-                                <li>
-                                    <a href="table_dt_multiple_tables.html"> Multiple Tables</a>
-                                </li>
-                                <li>
-                                    <a href="table_dt_alternative_pagination.html"> Alt. Pagination</a>
-                                </li>
-                                <li>
-                                    <a href="table_dt_custom.html"> Custom </a>
-                                </li>
-                                <li>
-                                    <a href="table_dt_range_search.html"> Range Search </a>
-                                </li>
-                                <li>
-                                    <a href="table_dt_html5.html"> HTML5 Export </a>
-                                </li>
-                                <li>
-                                    <a href="table_dt_live_dom_ordering.html"> Live DOM ordering </a>
-                                </li>
-                                <li>
-                                    <a href="table_dt_miscellaneous.html"> Miscellaneous </a>
-                                </li> -->
-                            </ul>
+                        </ul>
                         </li>
                     </ul>
                 </div>

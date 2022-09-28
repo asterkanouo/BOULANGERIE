@@ -8,6 +8,7 @@
     <div class="card-body ">
         <form class=""  style=" " method="post" action="{{route('fact_en_cours_four')}}">
         @csrf
+       
           <div class="row">
             <div class="col  col-sm-6">
                 <div class="mr-2 card  rounded shadow-sm mb-4" style="width:420px;">

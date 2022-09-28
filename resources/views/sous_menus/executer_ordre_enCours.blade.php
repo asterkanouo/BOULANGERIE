@@ -3,7 +3,7 @@
 <div class=" border rounded-0 shadow" style="width: 1380px;margin-top: 0px;margin-left: 120px;">
 <div class=" border rounded-0 shadow" style="width: 1380px;margin-top: 0px;">
     <div class=" card-header d-flex justify-content-center pb-2 mb-4 ">
-    <h5>Liste des ordres de production</h5>
+    <h5>Liste des ordres de production en cours d'exécution</h5>
     </div>
     <div class="card-body ">
         <form class=""  style=" " method="post" action="{{route('fact_en_cours_four')}}">
@@ -22,7 +22,7 @@
                       </select>
                       </div>
                    
-                    <button class="btn btn-secondary mb-2 mt-2" type="button" style="width: 300px;height: 50px; margin-top: 0px;margin-left:112px;">Afficher</button>
+                      <button class="btn btn-secondary mb-2 mt-2" type="button" style="width: 300px;height: 50px; margin-top: 0px;margin-left:112px;">Afficher</button>
                 </div>
             </div> 
             
@@ -50,13 +50,9 @@
                 </tbody>
             </table>
             </div> 
-            </div>
- 
-
-
-
+            </div> 
             <div class="mt-4  mb-4 form-group row d-flex justify-content-center" >
-                <button class="mr-3 btn btn-primary " type="button" style="background-color: #19aa53;">Executer l'ordre</button>
+                <button class="mr-3 btn btn-primary " type="button" style="background-color: #19aa53;">Afficher</button>
                 <a class="btn btn-danger mr-3 " href="{{route('welcome')}}" type="button" style="background-color: rgb(255,15,0);">Fermer</a></div>
             </div>
          </form>

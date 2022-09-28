@@ -49,6 +49,6 @@ class TraitementController extends Controller
 
     public function deconnexion(){
         auth()->logout();
-        return redirect('connexion');
+        return redirect('/');
     }
 }

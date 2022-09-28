@@ -114,4 +114,32 @@ class ProductionController extends Controller
         $depots = Depot::all();
         return view('sous_menus/executer_ordre_prod',compact('depots'));
     }
+    public function executer_ordre_enCours(){
+        $depots = Depot::all();
+        return view('sous_menus/executer_ordre_enCours',compact('depots'));
+    }
+    public function consommer_ordre(){
+        $depots = Depot::all();
+        return view('sous_menus/consommation_ordre',compact('depots'));
+    }
+    public function creer_standard_prod(){
+        $depots = Depot::all();
+        $produits = Produit::all();
+        $matiere_ps = Matiere_p::all();
+        $equipes = Equipe::all();
+        return view('sous_menus/creer_standard_prod',compact('depots','matiere_ps','equipes', 'produits') );
+    }
+    public function parametrer_standard_prod(){
+        $depots = Depot::all();
+        $equipes = Equipe::all();
+        return view('sous_menus/parametre_standard_prod',compact('depots','equipes') );
+    }
+    public function modifier_standard_prod(){
+        $depots = Depot::all();
+        return view('sous_menus/modifier_standard_prod',compact('depots') );
+    }
+    public function centre_de_charge(){
+        return view('sous_menus/centre_de_charge');
+    }
+ 
 }

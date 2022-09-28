@@ -17,7 +17,7 @@
                       <select class="form-control" style="margin-left: 16px;margin-top: 0px;width:270px;">
                       <option value=""></option>
                       @foreach($depots as $depot)
-                          <option value="{{$depot->code_matiere}}">{{$depot->libelle}}</option>
+                          <option value="{{$depot->libelle}}">{{$depot->libelle}}</option>
                       @endforeach
                       </select>
                       </div>
